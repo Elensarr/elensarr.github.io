@@ -58,6 +58,27 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
         transition: 0.2s;
     }
 
+/* =================== MEDIA QUERIES ======================*/
+/*Large*/
+@media screen and (min-width: 1008px) {
+    #logo_main {
+      font-size: 10rem;
+    }
+  }
+/*medium*/
+  @media screen and (max-width: 1007px) {
+    #logo_main {
+      font-size: 10rem;
+    }
+  }
+  /* Small */
+  @media screen and (max-width: 640px) {
+    #logo_main {
+      font-size: 7rem;
+    }
+  }
+
+
 /* =================== HEADER (LOGO) ======================*/
 .bgimg {
     background-position: center;
@@ -68,23 +89,12 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
   }
   
 /*Logo on the home page*/
-#logo_main {    
-    
-
+#logo_main {   
     font-family: var(--logo);
     letter-spacing: 0.5rem;
     text-shadow: 2px 2px 17px #000000; 
 }
-@media screen and (min-width: 641px) {
-#logo_main {
-    font-size: 1rem;
-}
-}
-@media screen and (max-width: 640px) {
-    #logo_main {
-        font-size: 10vw;
-    }
-    }
+
 
 /*Logo on regular pages*/
 .logo {    
