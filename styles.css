@@ -82,7 +82,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 }
 @media screen and (max-width: 640px) {
     #logo_main {
-        font-size: 50vw;
+        font-size: 10vw;
     }
     }
 
