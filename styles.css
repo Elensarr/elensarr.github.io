@@ -64,7 +64,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     background-size: cover;
     
     background-image:linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 50%, rgba(0,0,0,1) 100%), url(images/index_large.jpg);
-    min-height: 100%;
+    min-height: 80%;
   }
   
 /*Logo on the home page*/
@@ -73,8 +73,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 
     font-family: var(--logo);
     letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 17px #000000;  
-    border: blanchedalmond solid 1px;
+    text-shadow: 2px 2px 17px #000000; 
 }
 @media screen and (min-width: 641px) {
 #logo_main {
@@ -109,7 +108,6 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     font-size: 0.8rem;
     word-spacing: 0.4rem;
     letter-spacing: 0.4rem;
-    border: blanchedalmond solid 1px;
 }
 
 /* =================== MAIN ======================*/
@@ -149,31 +147,17 @@ main h1 {
 #reservation_button {
     word-spacing: 0.4rem;
     letter-spacing: 0.4rem;
-}
-
-a.button {
-    margin-top: 2rem;   
-    font-family:var(--text1);
     text-transform: uppercase;
-    text-align: center;
-    background-color: rgb(248, 62, 62);
+    margin-top: 2rem;
+    padding: 2rem;
+    font-family:var(--text1);
     font-size: 0.8rem;
-    
-    cursor: pointer;   
-    text-decoration: none; 
-    color: var(--main);
+    background-color: rgb(248, 62, 62);
+    border: solid 2px white;
+    -webkit-box-shadow: 0px 0px 8px 1px #000000; 
+    box-shadow: 0px 0px 8px 1px #000000;
 }
 
-a.button > a:link {
-    color: var(--main);
-}
-a.button > a:visited {
-    color: var(--main);
-}
-a.button:hover {
-    color:var(--nav_text_colour_hover);
-	transition: 0.2s;	
-    background-color: var(--nav_buttons_colour_hover);
 
 }
 /* =================== UNIVERSAL SETTINGS ======================*/
@@ -181,7 +165,6 @@ a.button:hover {
     border: solid 2px white;
     -webkit-box-shadow: 0px 0px 8px 1px #000000; 
     box-shadow: 0px 0px 8px 1px #000000;
-    padding: 2rem;
 }
 p {
     font-family: var(--text1);
