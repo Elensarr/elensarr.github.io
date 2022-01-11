@@ -68,13 +68,13 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
   }
   
 /*Logo on the home page*/
-#logo_main {    	
-    font-size: 10rem;
+#logo_main {    
     
 
     font-family: var(--logo);
     letter-spacing: 0.5rem;
     text-shadow: 2px 2px 17px #000000;  
+    border: blanchedalmond solid 1px;
 }
 @media screen and (min-width: 641px) {
 #logo_main {
@@ -98,21 +98,18 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     letter-spacing: 0.9rem;
     text-shadow: 2px 2px 17px #000000;  
     text-decoration: none;
+
 }
 
-.centered {
-    vertical-align: bottom;
-    padding: 1rem;
-}
 /*Slogan on home pages*/
 #slogan_main {
     color: var(--main);
     font-family:var(--text1);
     text-transform: uppercase;
-    text-align: center;
     font-size: 0.8rem;
     word-spacing: 0.4rem;
     letter-spacing: 0.4rem;
+    border: blanchedalmond solid 1px;
 }
 
 /* =================== MAIN ======================*/
@@ -155,11 +152,11 @@ main h1 {
 }
 
 a.button {
-    margin-top: 1rem;   
+    margin-top: 2rem;   
     font-family:var(--text1);
     text-transform: uppercase;
     text-align: center;
-    background-color: transparent;
+    background-color: rgb(248, 62, 62);
     font-size: 0.8rem;
     
     cursor: pointer;   
@@ -184,7 +181,7 @@ a.button:hover {
     border: solid 2px white;
     -webkit-box-shadow: 0px 0px 8px 1px #000000; 
     box-shadow: 0px 0px 8px 1px #000000;
-    padding: 1rem;
+    padding: 2rem;
 }
 p {
     font-family: var(--text1);
