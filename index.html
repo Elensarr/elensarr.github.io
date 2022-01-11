@@ -1,34 +1,121 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
+<html id="html_homepage">
+     <head>
 
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        
+        <link rel="stylesheet" href="styles.css">
         
         <!-- Page title -->
 		<title>HAUKAI - Home page </title>
         
         <!-- W3.CSS framework import-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        
-        <link rel="stylesheet" href="styles.css">
+
+        <!-- Web font import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+   
+   <script>
+       //determines if the restaurant is open or closed based on
+       // curent time and day of the week
+       function isOpen() {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+           var isOpen = "Open";
+           var today = new Date();
+           var opens = new Date();
+           opens.setHours(17,0,0); // 5.00 pm
+           if (today.getDay()==1 || today.getDay()==2 ) {
+               isOpen="Closed";
+           } else {
+               if (today.getHours()< opens) {
+                   isOpen = "Open from 5pm";
+                }  
+           }
+           document.getElementById("availability_info").innerHTML = "Today, "+
+            today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable();
+       }
+       //function to send request to server to check if tables are avialable
+       //will be developed later
+       // for now just return hardcored value "available"
+       function tablesAvailable() {
+           return "available";
+       }     
+       
+   </script>
+   
    
     </head>
-    <body>
-        <!-- NAVIGARION BAR -->
-        <div class="w3-bar">
-	        <a class="w3-bar-item w3-button"  class="active" href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
-			<a class="w3-bar-item w3-button" href = "./contact.html" > CONTACT </a>
-			<a  class="w3-bar-item w3-button" href = "./hours.html" > HOURS </a> 				
-			<a class="w3-bar-item w3-button" href = "./menu.html" > MENU </a>
-			<a class="w3-bar-item w3-button" href = "./reservation.html">RESERVATION</a>
-        </div>
+    <body id="homepage" onload="isOpen()">
+    
+    
+        
 
+        <!-- NAVIGARION BAR (for desktop)-->
+        <nav class="w3-top">
+            <div class="w3-bar w3-right" >
+                <a class="w3-white  w3-bar-item w3-button w3-mobile w3-hover-white w3-hide-small"  href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
+                <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-white w3-hide-small" href = "./contact.html" > CONTACT </a>
+                <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-white w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-white w3-hide-small" href = "./menu.html" > MENU </a>
+                <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-white w3-hide-small" href = "./reservation.html">RESERVATION</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+            </div>
+            <!-- Collapsed menu on small screens-->
+            <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                <a class="w3-bar-item w3-white w3-button w3-hover-white " href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
+                <a class="w3-bar-item w3-button w3-hover-white" href = "./contact.html" > CONTACT </a>
+                <a class="w3-bar-item w3-button w3-hover-white" href = "./hours.html" > HOURS </a> 				
+                <a class="w3-bar-item w3-button w3-hover-white" href = "./menu.html" > MENU </a>
+                <a class="w3-bar-item w3-button w3-hover-white" href = "./reservation.html">RESERVATION</a>
+            </div>
+            <!-- Function to collapse navbar on small screens-->
+            <script>
+                function myFunction() {
+                var x = document.getElementById("nav_small");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+                }
+            </script>
+        </nav>	
 
-         
-			
+    </nav>
+
+            <!--  LOGO -->
+            <header>
+                <div class="centered">
+                    <p id="logo_main"> HAUKAI</p>
+                    <p id="slogan_main">Explore Maori food traditions</p>
+                </div>
+            </header>
+
+            <!-- BOOK BUTTON-->
+            <main id="main_home">
+               <a class="button white_border" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a>
+            </main>
+            <footer>
+                <div id="availability"> 
+                    <a href = "./reservation.html" class="button white_border" id="availability_info" > 
+                        We are open WEDNESDAY-SUNDAY <br>from 5pm till late
+                    </a>   
+                </div> 
+           
+                <div>
+                </div>
+                <div id="contacts" >
+                    <h1>HAUKAI</h1>
+                    <p><br>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019
+                    <br><br> Wednesday-Sunday <br>5pm till late</p>
+                </div>
+                <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
+            </footer>
 
     </body>
 </html>
+   
+
