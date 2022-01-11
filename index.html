@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="html_homepage">
+<html>
      <head>
 
         <meta charset="utf-8">
@@ -34,7 +34,7 @@
                    isOpen = "Open from 5pm";
                 }  
            }
-           document.getElementById("availability_info").innerHTML = "Today, "+
+         //  document.getElementById("availability_info").innerHTML = "Today, "+
             today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable();
        }
        //function to send request to server to check if tables are avialable
@@ -48,14 +48,11 @@
    
    
     </head>
-    <body id="homepage" onload="isOpen()">
+    <body >
     
-    
-        
-
         <!-- NAVIGARION BAR (for desktop)-->
         <nav class="w3-top">
-            <div class="w3-bar w3-right" >
+            <div class="w3-bar w3-right " >
                 <a class="w3-white  w3-bar-item w3-button w3-mobile w3-hover-white w3-hide-small"  href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
                 <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-white w3-hide-small" href = "./contact.html" > CONTACT </a>
                 <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-white w3-hide-small" href = "./hours.html" > HOURS </a> 				
@@ -84,17 +81,34 @@
             </script>
         </nav>	
 
-    </nav>
+    
 
-            <!--  LOGO -->
-            <header>
+            <!--  LOGO 
+            <header class="w3-content">
                 <div class="centered">
                     <p id="logo_main"> HAUKAI</p>
                     <p id="slogan_main">Explore Maori food traditions</p>
                 </div>
-            </header>
+            </header>-->
 
-            <!-- BOOK BUTTON-->
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" id="logo_main">HAUKAI</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
+
+
+
+
+            <!-- BOOK BUTTON
             <main id="main_home">
                <a class="button white_border" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a>
             </main>
@@ -113,7 +127,7 @@
                     <br><br> Wednesday-Sunday <br>5pm till late</p>
                 </div>
                 <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
-            </footer>
+            </footer>-->
 
     </body>
 </html>

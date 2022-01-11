@@ -31,42 +31,19 @@
 	margin:0;
 	color: var(--main);
 }
-/*grid template */
-/*For home page - larger logo*/
-#homepage {
-    display: grid;
-    grid-template-rows:  25% 55% 25% auto;
-    grid-template-areas:
-    "nav"
-    "head"
-    "main"
-    "foot";
-    height: 100vh;
-}
-/*for regular pages */
-body {
-    display: grid;
-    grid-template-rows:  20% 80% auto;
-    grid-template-areas:
-    "head nav"    
-    "main main"
-    "foot foot";
-    height: 100vh;
-}
-
-/* =================== BACKGROUND IMAGE ======================*/
-
-html#html_homepage { 
-    background: black; /* if browser can't download image)*/  
-    background: linear-gradient(90deg, rgba(0,0,0,0.6) 100%, rgba(0,212,255,0) 50%), url(images/entrance.jpg), no-repeat center fixed; 
-    background-size: cover;
-    /*Photo by Charles Parker from Pexels*/
+body, html {
+    height: 100%;
+    
   }
+
+
+/* =================== BACKGROUND ======================*/
+
+
   html {
-    background: rgb(22,22,22);
+background: rgb(22,22,22);
 background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,0,1) 100%);
-
-  }
+}
 
 /* =================== NAVIGATION BAR ======================*/
 
@@ -82,18 +59,34 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     }
 
 /* =================== HEADER (LOGO) ======================*/
-header {
-    grid-area: head;    
-}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    
+    background-image:linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 50%, rgba(0,0,0,1) 100%), url(images/index_large.jpg);
+    min-height: 100%;
+  }
+  
 /*Logo on the home page*/
-#logo_main {    
-    text-align:center;	
+#logo_main {    	
     font-size: 10rem;
-    color: var(--main);
+    
+
     font-family: var(--logo);
     letter-spacing: 0.5rem;
     text-shadow: 2px 2px 17px #000000;  
 }
+@media screen and (min-width: 601px) {
+#logo_main {
+    font-size: 10rem;
+}
+}
+@media screen and (max-width: 600x) {
+    #logo_main {
+        font-size: 90vw;
+    }
+    }
+
 /*Logo on regular pages*/
 .logo {    
     display: inline-block;
