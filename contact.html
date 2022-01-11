@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <!-- Page title -->
+		<title>HAUKAI - Contacts </title>
+
+        <!-- Web font import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+   
+   <script>
+       //determines if the restaurant is open or closed based on
+       // curent time and day of the week
+       function isOpen() {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+           var isOpen = "Open";
+           var today = new Date();
+           var opens = new Date();
+           opens.setHours(17,0,0); // 5.30 pm
+           if (today.getDay()==1 || today.getDay()==2 ) {
+               isOpen="Closed";
+           } else {
+               if (today.getHours()< opens) {
+                   isOpen = "Open from 5pm";
+                }  
+           }
+           document.getElementById("availability_info").innerHTML = "Today, "+
+            today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable();
+       }
+       //function to send request to server to check if tables are avialable
+       //will be developed later
+       // for now just return hardcored value "available"
+       function tablesAvailable() {
+           return "available";
+       }     
+       
+   </script>
+   
+   
+    </head>
+    <body  onload="isOpen()">
+    
+    <nav>
+        <!-- NAVIGARION BAR -->
+			<div id = "navbar" class="link">
+				<ul>				
+					<li><a   href = "./index.html" > HOME </a> <li> 
+					<li><a class="active" href = "./contact.html" > CONTACT </a><li> <!-- selection for the active page -->	
+					<li><a  href = "./hours.html" > HOURS </a><li> 				
+					<li><a href = "./menu.html" > MENU </a><li>
+					<li><a href = "./reservation.html">RESERVATION</a><li>
+				</ul>  
+			</div> 
+    </nav>
+
+            <!--  LOGO -->
+            <header>
+                    <a class="logo white_border" href = "./index.html">  HAUKAI</a>                    
+            </header>
+
+            <main >
+                <h1>CONTACTS</h1>
+                <div class="two_columns">
+                    <div id="address">
+                        <p>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019<br> 
+                            <a href = "mailto: info@thehaukai.com">info@thehaukai.com</a></p>
+
+                    </div>
+                    <div id="map" class="map-responsive">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6518.185895667221!2d173.9498810159371!3d-35.22905617514069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1641504597530!5m2!1sen!2snz"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </main>
+
+
+
+            <!-- FOOTER -->
+            <footer>
+                <div id="availability"> 
+                    <a href = "./reservation.html" class="button white_border" id="availability_info" > 
+                        We are open WEDNESDAY-SUNDAY <br>from 5pm till late
+                    </a>   
+                </div> 
+                <div>
+
+                </div>
+                <div id="contacts" >
+                    <h1>HAUKAI</h1>
+                    <p><br>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019
+                    <br><br> Wednesday-Sunday <br>5pm till late</p>
+
+                </div>
+                <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
+            </footer>
+
+    </body>
+</html>

@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html id="html_homepage">
+<html>
      <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link rel="stylesheet" href="styles.css">
-        
+        <meta charset="utf-8">
         <!-- Page title -->
-		<title>HAUKAI - Home page </title>
-        
-        <!-- W3.CSS framework import-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<title>HAUKAI - Contacts </title>
 
         <!-- Web font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +19,7 @@
            var isOpen = "Open";
            var today = new Date();
            var opens = new Date();
-           opens.setHours(17,0,0); // 5.00 pm
+           opens.setHours(17,0,0); // 5.30 pm
            if (today.getDay()==1 || today.getDay()==2 ) {
                isOpen="Closed";
            } else {
@@ -48,15 +41,15 @@
    
    
     </head>
-    <body id="homepage" onload="isOpen()">
+    <body  onload="isOpen()">
     
     <nav>
         <!-- NAVIGARION BAR -->
 			<div id = "navbar" class="link">
 				<ul>				
-					<li><a  class="active" href = "./index.html" > HOME </a> <li>  <!-- selection for the active page -->	
-					<li><a href = "./contact.html" > CONTACT </a><li>
-					<li><a  href = "./hours.html" > HOURS </a><li> 				
+					<li><a   href = "./index.html" > HOME </a> <li> 
+					<li><a  href = "./contact.html" > CONTACT </a><li> 
+					<li><a class="active" href = "./hours.html" > HOURS </a><li> 			<!-- selection for the active page -->		
 					<li><a href = "./menu.html" > MENU </a><li>
 					<li><a href = "./reservation.html">RESERVATION</a><li>
 				</ul>  
@@ -65,34 +58,45 @@
 
             <!--  LOGO -->
             <header>
-                <div class="centered">
-                    <p id="logo_main"> HAUKAI</p>
-                    <p id="slogan_main">Explore Maori food traditions</p>
-                </div>
+                    <a class="logo white_border" href = "./index.html">  HAUKAI</a>                    
             </header>
 
-            <!-- BOOK BUTTON-->
-            <main id="main_home">
-               <a class="button white_border" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a>
+            <main >
+                <h1>OPENING HOURS</h1>
+                <div class="two_columns">
+                    <div id="address">
+                        <p>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019<br> 
+                            <a href = "mailto: info@thehaukai.com">info@thehaukai.com</a></p>
+
+                    </div>
+                    <div id="map" class="map-responsive">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6518.185895667221!2d173.9498810159371!3d-35.22905617514069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1641504597530!5m2!1sen!2snz"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
             </main>
+
+
+
+            <!-- FOOTER -->
             <footer>
                 <div id="availability"> 
                     <a href = "./reservation.html" class="button white_border" id="availability_info" > 
                         We are open WEDNESDAY-SUNDAY <br>from 5pm till late
                     </a>   
                 </div> 
-           
                 <div>
+
                 </div>
                 <div id="contacts" >
                     <h1>HAUKAI</h1>
                     <p><br>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019
                     <br><br> Wednesday-Sunday <br>5pm till late</p>
+
                 </div>
                 <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
             </footer>
 
     </body>
 </html>
-   
-
