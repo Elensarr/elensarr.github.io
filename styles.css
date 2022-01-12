@@ -48,7 +48,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 /* =================== NAVIGATION BAR ======================*/
 
 /*Navigation bar links */
-   a {
+   nav a {
 	font-size: 0.8rem;
     word-spacing: 0.4rem;
     letter-spacing: 0.4rem;
@@ -102,9 +102,11 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     text-transform: uppercase;
     word-spacing: 0.4rem;
     padding: 0.2rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
     background-color: black;
 }
+
+
 
 /*Logo on regular pages*/
 .logo {    
@@ -117,24 +119,72 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     letter-spacing: 0.9rem;
     text-shadow: 2px 2px 17px #000000;  
     text-decoration: none;
-
-}
-main {
-    margin: 20px 0;
     
 }
+main h1{
+    
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: var(--text1);
+    text-transform: uppercase;  
+    font-weight: bold;
+    color: black;   
+}
 main a, main a:visited {
-    letter-spacing: 0.2rem;
+    
     word-spacing: 0;
     text-transform: uppercase;
     text-decoration: none;   
 }
-main span {
+main span ,main p {
     color: black; 
+    font-size: 0.8rem;
 }
 main div {
-    margin: 10px;
+    border-radius: 2px;
+    
 }
+.spaced {
+    letter-spacing: 0.2rem;
+}
+.shadow {    
+    -webkit-box-shadow: 0px 0px 8px 1px #000000; 
+    box-shadow: 0px 0px 8px 1px #000000;
+}
+
+/* ROW OF 3 COLUMNS WITH EQUAL HEIGHT AND VERTICALLY CENTERED*/
+
+
+/*for desktops and tablets only*/
+@media screen and (min-width: 641px) {
+  .grid-row-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto ;
+  }
+} 
+
+.grid-row-3col { 
+  margin: 1rem auto;
+}
+.col {   
+    text-align: center;
+    padding: 0.9rem;
+}
+.card {
+    background-color: whitesmoke;
+    padding: 0.8rem;
+    justify-items: center;
+    height:100%;
+    display: table; width:100%;    
+}
+.card > div {
+  align-items: center;
+  display: table-cell; 
+  vertical-align: middle;   
+}
+
 /* =================== MAIN ======================*/
 
 main {
@@ -146,13 +196,6 @@ main {
     display:grid;
     justify-content:center;
     align-items: baseline;
-}
-main h1 {
-    font-family: var(--text1);
-    letter-spacing: 1rem;
-    font-size: 4rem;
-    text-decoration-line: underline;
-    padding: 0.2rem;
 }
 
 /* =================== BUTTON ======================*/
@@ -170,6 +213,8 @@ main h1 {
     color: white;
     max-width: 100%;
     word-wrap: break-word;
+    letter-spacing: 0.3rem;    
+    border-radius: 2px;
 }
 
 
