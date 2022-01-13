@@ -263,6 +263,29 @@ p {
         grid-column: span 3;
         text-align: center;
         line-height: 2rem;
+        margin-top: 1rem;
     }
+/* =================== FOOTER ======================*/
+  footer {
+    background-color: black;
+    padding: 2rem;
+    
+  }
+  footer > p {
+    color: white;}
 
-  
+ p.modal {
+text-transform: none;
+text-align: left;
+color: black;
+  }
+
+.bolded {
+  font-weight: bold;
+  color: black;
+}
+
+.emphasized {
+  font-style: italic;
+  color: black;
+}

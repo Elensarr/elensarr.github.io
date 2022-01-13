@@ -223,8 +223,60 @@
         </main>
         
         <footer>
-                <div id="copiright"> <p> @Elensarr for HAUKAI, 2022 <br> <a href="./privacy.html">Privacy Statement</a></p></div>
-        </footer>
+                
+        
+                <div class="w3-container w3-center">
+
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
+                  
+                    <div id="id01" class="w3-modal">
+                      <div class="w3-modal-content w3-animate-opacity">
+
+
+                        <header class="w3-container w3-black">
+                            <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                            <h2>Privacy Statement</h2>
+                          </header>
+                      
+                          <div class="w3-container">
+                            <p class="modal">
+                                <br> We collect personal information from you, including information about your:<br>
+                                <span class="emphasized">- name<br>
+                                - contact information<br>
+                                - location<br></span>
+                                We collect your personal information in order to to secure booking made via our web application and
+                                collect your location to make sure Google directions are correct. <br>
+                                Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                                If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                                <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                                
+                                <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                                <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                                <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                            </p>
+                            <!-- Close button-->
+                            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                            <br><br>
+                        </div>
+                      </div>
+                      <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                          if (event.target == modal) {
+                            modal.style.display = "none";
+                          }
+                        }
+                        </script>
+                    </div>
+                    <!-- Copuright-->
+                    <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+                  </div>
+
+        
+            </footer>
 
 
   
