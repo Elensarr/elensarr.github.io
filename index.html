@@ -17,7 +17,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-   
+        
+       
+        
+      
+
+
    <script>
        //determines if the restaurant is open or closed based on
        // curent time and day of the week
@@ -34,7 +39,7 @@
                    isOpen = "Open from 5pm";
                 }  
            }
-          document.getElementById("availability_info").innerHTML = "<span  style='display: block;'>Today, "+
+          document.getElementById("availability_info").innerHTML = "<span >Today, "+
             today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable()+"</span>";
        }
        //function to send request to server to check if tables are avialable
@@ -51,8 +56,8 @@
     <body onload="isOpen()" >
     
         <!-- NAVIGARION BAR (for desktop)-->
-        <nav class="w3-top">
-            <div class="w3-bar" >
+        <nav >
+            <div class="w3-bar w3-top ">
                 <a class="w3-sand  w3-bar-item w3-button w3-mobile w3-hover-sand w3-hide-small"  href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
                 <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACT </a>
                 <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
@@ -60,6 +65,10 @@
                 <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
                 <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
             </div>
+            
+
+
+
             <!-- Collapsed menu on small screens-->
             
             <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
@@ -84,50 +93,59 @@
 
         <!-- Header with image -->
         <header class="bgimg w3-display-container w3-grayscale-min" id="home">    
+            <div class= "w3-display-topright w3-button  w3-text-sand w3-mobile w3-hide-small">
+                <p class="w3-text-sand compact">1 ISLAND STREET KERIKERI, 09 401 4019, INFO@THEHAUKAI.COM</p>
+            </div>
             <div class="w3-display-middle w3-center">
-            <p class="w3-text-white" id="logo_main">HAUKAI</p>
-            <p id="slogan_main">Explore Maori food traditions</p>
-            <!-- BOOK BUTTON -->
-            <p><a class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
-
+                <p class="w3-text-white" id="logo_main">HAUKAI</p>
+                <p id="slogan_main">Explore Maori food traditions</p>
+                <!-- BOOK BUTTON -->
+                <p><a class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
+            </div>
+            
         </header>
-
+ <!-- Address with link to Google Maps-->
+            
+               
 
         <!--MAIN -->
         <main  >
 
             <div class="grid-row-3col"  > 
-            
+            <!-- CURENT STATUS -->
                 <div class="col" >
                     <div   class=" card shadow w3-hover-white "> 
-                        <div>
+                        <div style='border: solid rgb(70, 70, 70) 1px;'>
                             <a  href = "./reservation.html" id="availability_info" > 
                                 <span style="display: block;">We are open WEDNESDAY-SUNDAY <br>from 5pm till late </span>
                             </a> 
+                            <div id="seather"></div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- MORE INFO ABOUT MAORI -->
                 <div class="col" >
-                    <div class=" card shadow w3-hover-white "> 
-                        <div> 
-                            <div id="address">
-                                <h1> Location</h1>
-                                <p>1 Island Street <br> Kerikeri, Bay of Islands <br>09 401 4019,
-                                    <a href = "mailto: info@thehaukai.com">info@thehaukai.com</a></p>
-
-                            </div>
-                            <div id="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6518.185895667221!2d173.9498810159371!3d-35.22905617514069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1641504597530!5m2!1sen!2snz"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
+                    <div   class=" card shadow w3-hover-white "> 
+                        <div>
+                            <img src="./images/maori.jpg" alt="Alps" style="width:100%">
+                            <h1>  <a  href = "https://www.newzealand.com/int/maori-culture/"  > 
+                                <span >Learn more about Māori culture  </span>
+                            </a>  </h1>
+                            <!-- Photo is taken here, free licence https://www.pexels.com/photo/person-holding-brown-and-green-leaf-tree-8763778/ -->
+                        <!--Photo by Duane Mendes from Pexels-->
+                        
                         </div>
                     </div>
                 </div>
 
+               
+
+                <!-- OPENING HOURS -->
                 <div  class="col" > 
                     <div class="  card shadow w3-hover-white "> 
-                        <div>
+                        <div style='border: solid rgb(70, 70, 70) 1px;'>
                             <h1> Opening hours</h1>
                             <p> Monday: Closed</p>
                             <p> Tuesday: Closed</p>
@@ -141,32 +159,75 @@
                 </div>
             </div>
 
-
-
            
-                
+            <div class="grid-row-3col"  > 
+                 <!-- MENU -->
+                    <div class="col" >
+                        <div   class=" card shadow w3-hover-white "> 
+                            <div>
+                                <img src="./images/menu.jpg" alt="Table with plates with fancy served food on them" style="width:100%">
+                                
+                                <h1>  <a  href = "./menu.html"  > 
+                                    <span>Take a look at our menu </span>
+                                </a>  </h1>
+                               <!-- Photo is taken here, free licence https://www.pexels.com/photo/bowl-chairs-cooking-cuisine-262918/ -->
+                            </div>
+                        </div>
+                    </div>
+    
+                     <!-- LOCATION -->
+                <div class="col" >
+                    <div class=" card shadow w3-hover-white "> 
+                        <div style='border: solid rgb(70, 70, 70) 1px;'> 
+                            <div id="address">
+                                <h1> Location</h1>
+                                <p>1 Island Street <br> Kerikeri, Bay of Islands <br>09 401 4019,
+                                    <a href = "mailto: info@thehaukai.com">info@thehaukai.com</a></p>
 
-            
+                            </div>
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6518.185895667221!2d173.9498810159371!3d-35.22905617514069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1641504597530!5m2!1sen!2snz"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                    <!-- RESERVATION -->
+                    <div  class="col" > 
+                        <div class="  card shadow w3-hover-white w3-hide-small "> 
+                            <div>
+                                <img src="./images/booknow.jpg" alt="Alps" style="width:100%">
+                                <h1>  <a  href = "./reservation.html"  > 
+                                    <span >Make a reservation </span>
+                                </a>  </h1>
+                                <!-- Photo is taken here, under  free licence https://www.pexels.com/photo/menu-restaurant-france-eating-9315/ -->
+                                
+                   
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                    <!-- QUICK RESERVATION FOR MOBILE DEVISES-->
+                <div  class="col" > 
+                    <div class="  card shadow w3-hover-white w3-hide-large w3-hide-medium "> 
+                        <div>  
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXNj74hGmX8W5wPvSCVjsvKybstcl6w1L2YgqWpjvOla-HsQ/viewform?embedded=true" 
+                            width="339px" height="auto" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
 
-            
 
         </main>
+        
+        <footer>
+                <div id="copiright"> <p> @Elensarr for HAUKAI, 2022 <br> <a href="./privacy.html">Privacy Statement</a></p></div>
+        </footer>
 
 
-
-            <!--
-            <footer>
-                
-           
-                <div>
-                </div>
-                <div id="contacts" >
-                    <h1>HAUKAI</h1>
-                    <p><br>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019
-                    <br><br> Wednesday-Sunday <br>5pm till late</p>
-                </div>
-                <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
-            </footer>-->
+  
 
     </body>
 </html>
