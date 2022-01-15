@@ -4,13 +4,15 @@
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
         <!-- Page title -->
-		<title>HAUKAI - Contacts </title>
+		<title>HAUKAI - OUR MENU </title>
 
         <!-- Web font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
    
+        <!-- W3.CSS framework import-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <script>
        //determines if the restaurant is open or closed based on
        // curent time and day of the week
@@ -43,50 +45,447 @@
     </head>
     <body  onload="isOpen()">
     
-    <nav>
-        <!-- NAVIGARION BAR -->
-			<div id = "navbar" class="link">
-				<ul>				
-					<li><a   href = "./index.html" > HOME </a> <li> 
-					<li><a  href = "./contact.html" > CONTACT </a><li> 
-					<li><a  href = "./hours.html" > HOURS </a><li> 					
-					<li><a class="active" href = "./menu.html" > MENU </a><li> <!-- selection for the active page -->
-					<li><a href = "./reservation.html">RESERVATION</a><li>
-				</ul>  
-			</div> 
-    </nav>
+    
+    <nav >
+        <div class="w3-bar  ">
+            <a class=" w3-bar-item w3-black w3-button  w3-hover-sand w3-hide-small "  href = "./index.html" > HOME </a> 
+            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+            
+            <div class="w3-sand  w3-bar-item w3-button  "  > FOOD </div>   <!-- selection for the active page -->	
+             
+            <a class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+        </div>
 
-            <!--  LOGO -->
-            <header>
-                    <a class="logo white_border" href = "./index.html">  HAUKAI</a>                    
-            </header>
+        <!-- Collapsed menu on small screens-->            
+        <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 	
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
+        </div>    
+            <!-- Function to collapse navbar on small screens-->
+            <script>
+                function myFunction() {
+                var x = document.getElementById("nav_small");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "fccc");
+                }
+                }
+            </script>
+        </nav>
 
-            <main >
-                <h1>MENU</h1>
+        <main >
+            <div >
+                <h1 class="border_bottom">HAUKAI | MENU </h1>
+            </div>
+
+            <div class="grid-row-3col"  > 
+                <!-- APPETIZERS -->
+                    <div class="col" >
+                        <div   class=" card  shadow w3-hover-white "> 
+                            <div style="vertical-align: top;">
+                                <h2 class="menu_category"> APPETIZERS</h2>
+                                <div class="menu_item">
+                                    <p class="item">REWENA BREAD <span>10</span> </p>
+                                    <p class="description">Traditional Māori bread</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">PAUA FRITTER <span>16</span> </p>
+                                    <p class="description">Finely diced pieces of paua, served with a side salad and horopito dressing</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">RAW FISH  <span>20</span> </p>
+                                    <p class="description">Dried snapper fish marinated in coconut cream, served with tomatoes and spring onions</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">POACHED SALMON <span>22</span> </p>
+                                    <p class="description">Salmon poached in an orange and pistachio glaze, served with rewena bread</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">SEAFOOD BASKET <span>25</span> </p>
+                                    <p class="description">Crumbed mussels, salt and pepper squid, crumbed hoki bites and garlic prawns</p>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO -->
+                    <div class="col w3-hide-small" >
+                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                            <div style="vertical-align: top;"> 
+                                <div >
+                                    <img src="./images/lamb.jpg" alt="Lamb cousine with garlic and wild herbs" style="width: 100%;">
+
+                                </div>
+                                <!--https://www.pexels.com/photo/food-plate-restaurant-new-york-9515248/-->
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                
+                <!-- MAIN -->
+                    <div class="col" >
+                        <div   class=" card  shadow w3-hover-white "> 
+                            <div style="vertical-align: top;">
+                                <h2 class="menu_category"> MAINS</h2>
+                                <div class="menu_item">
+                                    <p class="item">FISH OF THE DAY <span>25</span> </p>
+                                    <p class="description">Beer battered fish and kumara fries, served with a side salad and homemade tartare</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">MUSSELS AND SCALLOPS <span>25</span> </p>
+                                    <p class="description">Steamed mussel & scallop mousse, honey and soy broth</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">SEAFOOD CHOWDER  <span>30</span> </p>
+                                    <p class="description">Creamy chowder filled with terakihi, prawn, hoki, scallops and mussels, served with flatbread</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">PORK BELLY <span>30</span> </p>
+                                    <p class="description">Slow cooked pork belly served on a bed of apple slaw with roasted kumara, and crispy noodle</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">LAMB STEAK <span>33</span> </p>
+                                    <p class="description">New Zealand Lamb coated in a kawakawa crumb, served with Dijon mustard glazed carrots, roasted butternut
+                                        squash and a mushroom Jus</p>
+                                </div> 
+                                <div class="menu_item">
+                                    <p class="item">VENISON <span>33</span> </p>
+                                    <p class="description">Venison crusted with horopito, served with glazed plums, cabbage salad and red wine Jus</p>
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="grid-row-3col"  > 
+                <!-- PHOTO -->
+                <div class="col w3-hide-small" >
+                    <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                        <div style="vertical-align: top;"> 
+                            <div >
+                                <img src="./images/appetizers.jpg" alt="Mussels, raw fish, seefood and sauses" style="width: 100%;">
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                
+                <!-- DESSERTS -->
+                    <div class="col" >
+                        <div   class=" card  shadow w3-hover-white "> 
+                            <div style="vertical-align: top;">
+                                <h2 class="menu_category"> DESSERTS</h2>
+                                <div class="menu_item">
+                                    <p class="item">KĀPITI ICE CREAM <span>10</span> </p>
+                                    <p class="description">Check for daily specials</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">STEAM PUDDING <span>12</span> </p>
+                                    <p class="description">Golden syrup flavoured steam pudding, served with vanilla ice cream</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">MINI PAVLOVA <span>16</span> </p>
+                                    <p class="description">Mini Pavlova served with kawakawa and lemon infused cream and fresh fruit</p>
+                                </div>
+                                <div class="menu_item">
+                                    <p class="item">BANOFFEE PIE <span>16</span> </p>
+                                    <p class="description">Toffee, fresh bananas and fresh cream</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO -->
+                    <div class="col w3-hide-small" >
+                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                            <div style="vertical-align: top;"> 
+                                <div >
+                                    <img src="./images/pavlova.jpg" alt="Mini pavlova decorated with straberries" style="width: 100%;">
+
+                                </div>
+                                <!-- https://www.pexels.com/photo/tasty-meringue-dessert-decorated-with-strawberries-in-cafeteria-6310078/-->
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="grid-row-3col"  > 
+                <!-- BEVERAGES -->
+                <div class="col" >
+                    <div   class=" card  shadow w3-hover-white "> 
+                        <div style="vertical-align: top;">
+                            <h2 class="menu_category"> RED WINE</h2>
+                            
+                            <table class="w3-table" >
+                                <tr>
+                                    <th></th>
+                                    <th ><p class="wine">B/G</p></th>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Terrace Edge Pinot Noir, 2012, Wairarapa</p></td>
+                                    <td><p class="wine_price">53/13</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Altitude Pinot Noir, 2010, Marlborough</p></td>
+                                    <td><p class="wine_price">64/15</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Greystone Pinot Noir, 2012, Wairarapa</p></td>
+                                    <td><p class="wine_price">73/17</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Terrace Edge, Syrah, 2012 Wairarapa</p></td>
+                                    <td><p class="wine_price">53/13</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Altitude Syrah, 2010 Marlborough</p></td>
+                                    <td><p class="wine_price">64/15</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Greystone Syrah, 2012, Wairarapa</p></td>
+                                    <td><p class="wine_price">73/17</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Altitude Pinot Noir, 2010, Marlborough</p></td>
+                                    <td><p class="wine_price">64/15</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Pegasus Bay Pinot Noir, 2013, Waipara</p></td>
+                                    <td><p class="wine_price">110</p></td>
+                                </tr>   
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col" >
+                    <div   class=" card  shadow w3-hover-white "> 
+                        <div style="vertical-align: top;">
+                            <h2 class="menu_category"> WHITE WINE</h2>
+                            
+                            <table class="w3-table" >
+                                <tr>
+                                    <th></th>
+                                    <th ><p class="wine">B/G</p></th>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Spade Oak Pinot Gris, 2011, Gisborne</p></td>
+                                    <td><p class="wine_price">40/10</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Maude Pinot Gris, 2017, Otago</p></td>
+                                    <td><p class="wine_price">49.5/11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Charles Wiffen Chardonnay, 2013, Otago</p></td>
+                                    <td><p class="wine_price">48/11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Amisfield, Riesling, 2016, Otago</p></td>
+                                    <td><p class="wine_price">53/13</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Lamont Riesling, 2010, Otago</p></td>
+                                    <td><p class="wine_price">57/13</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Elephant Hill Viognier, 2013, Hawkes Bay</p></td>
+                                    <td><p class="wine_price">55/12</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Folium Sauvignon Blanc, 2011, Marlborough</p></td>
+                                    <td><p class="wine_price">52/11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Billecart-Salmon Brut Reserve, France</p></td>
+                                    <td><p class="wine_price">120</p></td>
+                                </tr>   
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    
+                
                 
 
-            </main>
+                    <!-- PHOTO -->
+                    <div class="col w3-hide-small" >
+                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                            <div style="vertical-align: top;"> 
+                                <div >
+                                    <img src="./images/wine.jpg" alt="cellar with wine bottles" style="width: 100%;">
+
+                                </div>
+                                <!-- https://www.pexels.com/photo/cellar-with-wine-bottles-774455/-->
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
 
 
-
-            <!-- FOOTER -->
-            <footer>
-                <div id="availability"> 
-                    <a href = "./reservation.html" class="button white_border" id="availability_info" > 
-                        We are open WEDNESDAY-SUNDAY <br>from 5pm till late
-                    </a>   
-                </div> 
-                <div>
-
+            <div class="grid-row-3col"  > 
+                <!-- BEVERAGES -->
+               
+                <div class="col" >
+                    <div   class=" card  shadow w3-hover-white "> 
+                        <div style="vertical-align: top;">
+                            <h2 class="menu_category"> BEER AND CIDER</h2>
+                            
+                            <table class="w3-table" >
+                                <tr >
+                                    <td><p class="wine">Garage project range </p></td>
+                                    <td><p class="wine_price">11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Tuatara range</p></td>
+                                    <td><p class="wine_price">11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Panhead range</p></td>
+                                    <td><p class="wine_price">10</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Coopers Ale</p></td>
+                                    <td><p class="wine_price">10</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Lamont Riesling, 2010, Otago</p></td>
+                                    <td><p class="wine_price">57/13</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Heineken</p></td>
+                                    <td><p class="wine_price">11</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Moa Cider</p></td>
+                                    <td><p class="wine_price">10</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Crooked Cider</p></td>
+                                    <td><p class="wine_price">10</p></td>
+                                </tr>   
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div id="contacts" >
-                    <h1>HAUKAI</h1>
-                    <p><br>1 Island Street <br> Kerikeri <br> Bay of Islands <br>09 401 4019
-                    <br><br> Wednesday-Sunday <br>5pm till late</p>
+    
+                
+                
 
+                    <!-- PHOTO -->
+                    <div class="col w3-hide-small" >
+                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                            <div style="vertical-align: top;"> 
+                                <div >
+                                    <img src="./images/coffee.jpg" alt="Cup of coffee with froth" style="width: 100%;">
+
+                                </div>
+                                <!-- https://www.pexels.com/photo/cup-of-delicious-coffee-with-froth-on-breakfast-in-cafeteria-1170659/-->
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col" >
+                        <div   class=" card  shadow w3-hover-white "> 
+                            <div style="vertical-align: top;">
+                                <h2 class="menu_category"> NON-ALCOHOLIC</h2>
+                                
+                                <table class="w3-table" >
+                                    <tr >
+                                        <td><p class="wine">Mineral water</p></td>
+                                        <td><p class="wine_price">4.00</p></td>
+                                    </tr>
+                                    <tr >
+                                        <td><p class="wine">Soft drinks </p></td>
+                                        <td><p class="wine_price">4.00</p></td>
+                                    </tr>
+                                    <tr >
+                                        <td><p class="wine">Juice</p></td>
+                                        <td><p class="wine_price">4.00</p></td>
+                                    </tr>
+                                    <tr >
+                                        <td><p class="wine">Coffee</p></td>
+                                        <td><p class="wine_price">4.50</p></td>
+                                    </tr>
+                                    <tr >
+                                        <td><p class="wine">Tea</p></td>
+                                        <td><p class="wine_price">3.50</p></td>
+                                    </tr>  
+                                </table>
+                            </div>
+                        </div>
+                    </div>      
+            </div>
+
+            <!-- BOOK BUTTON -->
+            <div class="w3-center">
+                <p><a class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
+            </div>
+        </main>
+        <footer>
+            <div class="w3-container w3-center">
+
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
+              
+                <div id="id01" class="w3-modal">
+                  <div class="w3-modal-content w3-animate-opacity">
+
+
+                    <header class="w3-container w3-black">
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                        <h2>Privacy Statement</h2>
+                      </header>
+                  
+                      <div class="w3-container">
+                        <p class="modal">
+                            <br> We collect personal information from you, including information about your:<br>
+                            <span class="emphasized">- name<br>
+                            - contact information<br>
+                            - location<br></span>
+                            We collect your personal information in order to to secure booking made via our web application and
+                            collect your location to make sure Google directions are correct. <br>
+                            Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                            If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                            <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                            
+                            <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                            <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                            <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                        </p>
+                        <!-- Close button-->
+                        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                        <br><br>
+                    </div>
+                  </div>
+                  <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');                        
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+                    </script>
                 </div>
-                <div id="copiright"> <p> @Elensarr for HAUKAI <br> <a href="./privacy.html">Privacy Statement</a></p></div>
-            </footer>
+                <!-- Copuright-->
+                <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+              </div>        
+        </footer>
 
-    </body>
+</body>
 </html>

@@ -4,13 +4,15 @@
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
         <!-- Page title -->
-		<title>HAUKAI - Contacts </title>
+		<title>HAUKAI - MAKE A BOOKING </title>
 
         <!-- Web font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
    
+        <!-- W3.CSS framework import-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <script>
        //determines if the restaurant is open or closed based on
        // curent time and day of the week
@@ -44,17 +46,39 @@
     <body  onload="isOpen()">
     
     <nav>
-        <!-- NAVIGARION BAR -->
-			<div id = "navbar" class="link">
-				<ul>				
-					<li><a   href = "./index.html" > HOME </a> <li> 
-					<li><a  href = "./contact.html" > CONTACT </a><li> 
-					<li><a  href = "./hours.html" > HOURS </a><li> 					
-					<li><a href = "./menu.html" > MENU </a><li> 
-					<li><a  class="active" href = "./reservation.html">RESERVATION</a><li> <!-- selection for the active page -->
-				</ul>  
-			</div> 
-    </nav>
+        <!-- NAVIGARION BAR (for desktop)-->
+    <nav >
+        <div class="w3-bar  ">
+            <a class=" w3-bar-item w3-button  w3-hover-sand w3-hide-small"  href = "./index.html" > HOME </a> 
+            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a> 				
+<a class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./hours.html">HOURS</a>
+            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
+            
+            <div class="w3-sand  w3-bar-item w3-button  "  > RESERVATION </div>   <!-- selection for the active page -->	
+             
+            
+            <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+        </div>
+
+        <!-- Collapsed menu on small screens-->            
+        <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACT </a>
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
+            <a class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
+        </div>    
+            <!-- Function to collapse navbar on small screens-->
+            <script>
+                function myFunction() {
+                var x = document.getElementById("nav_small");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "fccc");
+                }
+                }
+            </script>
+        </nav>
 
             <!--  LOGO -->
             <header>

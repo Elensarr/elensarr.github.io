@@ -57,27 +57,24 @@
     
         <!-- NAVIGARION BAR (for desktop)-->
         <nav >
-            <div class="w3-bar w3-top ">
-                <a class="w3-sand  w3-bar-item w3-button w3-mobile w3-hover-sand w3-hide-small"  href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
-                <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACT </a>
-                <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
-                <a class="w3-bar-item w3-black w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./menu.html" > MENU </a>
-                <a class="w3-bar-item w3-black  w3-button w3-mobile w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+            <div class="w3-bar w3-black ">
+                <div class="w3-sand  w3-bar-item w3-button  w3-hover-sand "  > HOME </div>   <!-- selection for the active page -->	
+                <a class="w3-bar-item w3-black  w3-button  w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+                <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
+                <a class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
                 <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
             </div>
-            
 
-
-
-            <!-- Collapsed menu on small screens-->
-            
+            <!-- Collapsed menu on small screens-->            
             <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
-                <a class="w3-bar-item w3-white w3-button w3-hover-sand " href = "./index.html" > HOME </a>   <!-- selection for the active page -->	
-                <a class="w3-bar-item w3-button w3-hover-white" href = "./contact.html" > CONTACT </a>
+                
+                <a class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
                 <a class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
-                <a class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > MENU </a>
+                <a class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
                 <a class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
             </div>
+
             <!-- Function to collapse navbar on small screens-->
             <script>
                 function myFunction() {
@@ -119,7 +116,6 @@
                             <a  href = "./reservation.html" id="availability_info" > 
                                 <span style="display: block;">We are open WEDNESDAY-SUNDAY <br>from 5pm till late </span>
                             </a> 
-                            <div id="seather"></div>
 
                         </div>
                     </div>
@@ -130,9 +126,9 @@
                     <div   class=" card shadow w3-hover-white "> 
                         <div>
                             <img src="./images/maori.jpg" alt="Alps" style="width:100%">
-                            <h1>  <a  href = "https://www.newzealand.com/int/maori-culture/"  > 
+                            <h2>  <a  href = "https://www.newzealand.com/int/maori-culture/"  > 
                                 <span >Learn more about Māori culture  </span>
-                            </a>  </h1>
+                            </a>  </h2>
                             <!-- Photo is taken here, free licence https://www.pexels.com/photo/person-holding-brown-and-green-leaf-tree-8763778/ -->
                         <!--Photo by Duane Mendes from Pexels-->
                         
@@ -144,16 +140,16 @@
 
                 <!-- OPENING HOURS -->
                 <div  class="col" > 
-                    <div class="  card shadow w3-hover-white "> 
+                    <div class="  card shadow w3-hover-white upper_case "> 
                         <div style='border: solid rgb(70, 70, 70) 1px;'>
-                            <h1> Opening hours</h1>
-                            <p> Monday: Closed</p>
-                            <p> Tuesday: Closed</p>
-                            <p> Wednesday: 5pm-11pm</p>
-                            <p> Thursday: 5pm-11pm</p>
-                            <p> Friday: 5pm-11pm</p>
-                            <p> Saturday: 5pm-11pm</p>
-                            <p> Sunday: 5pm-11pm</p>
+                            <h2> Opening hours</h2>
+                            <p> Monday: Closed</br>
+                            Tuesday: Closed</br>
+                            Wednesday: 5pm-11pm</br>
+                             Thursday: 5pm-11pm</br>
+                             Friday: 5pm-11pm</br>
+                            Saturday: 5pm-11pm</br>
+                             Sunday: 5pm-11pm</br>
                         </div>                            
                     </div>
                 </div>
@@ -167,9 +163,9 @@
                             <div>
                                 <img src="./images/menu.jpg" alt="Table with plates with fancy served food on them" style="width:100%">
                                 
-                                <h1>  <a  href = "./menu.html"  > 
+                                <h2>  <a  href = "./menu.html"  > 
                                     <span>Take a look at our menu </span>
-                                </a>  </h1>
+                                </a>  </h2>
                                <!-- Photo is taken here, free licence https://www.pexels.com/photo/bowl-chairs-cooking-cuisine-262918/ -->
                             </div>
                         </div>
@@ -177,10 +173,10 @@
     
                      <!-- LOCATION -->
                 <div class="col" >
-                    <div class=" card shadow w3-hover-white "> 
+                    <div class=" card shadow w3-hover-whit upper_case "> 
                         <div style='border: solid rgb(70, 70, 70) 1px;'> 
                             <div id="address">
-                                <h1> Location</h1>
+                                <h2> Location</h2>
                                 <p>1 Island Street <br> Kerikeri, Bay of Islands <br>09 401 4019,
                                     <a href = "mailto: info@thehaukai.com">info@thehaukai.com</a></p>
 
@@ -198,9 +194,9 @@
                         <div class="  card shadow w3-hover-white w3-hide-small "> 
                             <div>
                                 <img src="./images/booknow.jpg" alt="Alps" style="width:100%">
-                                <h1>  <a  href = "./reservation.html"  > 
+                                <h2>  <a  href = "./reservation.html"  > 
                                     <span >Make a reservation </span>
-                                </a>  </h1>
+                                </a>  </h2>
                                 <!-- Photo is taken here, under  free licence https://www.pexels.com/photo/menu-restaurant-france-eating-9315/ -->
                                 
                    
@@ -223,8 +219,6 @@
         </main>
         
         <footer>
-                
-        
                 <div class="w3-container w3-center">
 
                     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
@@ -273,9 +267,7 @@
                     </div>
                     <!-- Copuright-->
                     <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
-                  </div>
-
-        
+                  </div>        
             </footer>
 
 

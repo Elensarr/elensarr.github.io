@@ -48,7 +48,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 /* =================== NAVIGATION BAR ======================*/
 
 /*Navigation bar links */
-   nav a {
+   nav a, nav div {
 	font-size: 0.8rem;
     word-spacing: 0.4rem;
     letter-spacing: 0.4rem;
@@ -59,22 +59,23 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
     }
 
 /* =================== MEDIA QUERIES ======================*/
-/*Large*/
-@media screen and (min-width: 1008px) {
+/*Large and medium screens*/
+@media screen and (min-width: 641px) {
     #logo_main {
       font-size: 10rem;
     }
-  }
-/*medium*/
-  @media screen and (max-width: 1007px) {
-    #logo_main {
-      font-size: 10rem;
+    main h1 {
+      font-size: 4.5rem;
     }
   }
+
   /* Small */
   @media screen and (max-width: 640px) {
     #logo_main {
       font-size: 25vw;
+    }
+    main h1 {
+      font-size: 7vw;
     }
   }
 
@@ -89,8 +90,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
   
 /*Logo on the home page*/
 #logo_main {   
-    font-family: var(--logo);
-    
+    font-family: var(--logo);    
     letter-spacing: 0.5rem;
     text-shadow: 2px 2px 17px #000000; 
 }
@@ -108,29 +108,35 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 
 
 
-/*Logo on regular pages*/
-.logo {    
-    display: inline-block;
-    margin: 0.4rem;
-    text-align:left;	
-    font-size: 1.5rem;
-    color: var(--main);
-    font-family: var(--logo);    
-    letter-spacing: 0.9rem;
-    text-shadow: 2px 2px 17px #000000;  
-    text-decoration: none;
-    
-}
-main h1{
+
+main h2{
     
     letter-spacing: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     font-family: var(--text1);
     text-transform: uppercase;  
     font-weight: bold;
     color: black;   
 }
+
+h1.border_bottom {
+  border-bottom: white 2px solid;
+}
+
+main h1{
+    
+  letter-spacing: 0.4rem;
+  font-family: var(--text1);
+  text-transform: uppercase;  
+  text-align: center;
+  color: white;  
+  text-shadow: 2px 2px 17px #000000; 
+  margin: 2rem 0;
+  font-family: var(--logo);
+}
+
+
 main a, main a:visited {
     
     word-spacing: 0;
@@ -177,12 +183,14 @@ main div {
     padding: 0.9rem;
 }
 .card {
-    background-color: whitesmoke;
+    background-color: rgb(255, 247, 233);
     padding: 0.8rem;
     justify-items: center;
     height:100%;
     display: table; width:100%;    
 }
+
+
 .card > div {
   align-items: center;
   display: table-cell; 
@@ -201,17 +209,49 @@ text-decoration: none;
 }
 /* =================== MAIN ======================*/
 
-main {
-    grid-area: main;
-    text-align: left;
+.menu_item {
+  margin: 1rem;
 }
-#main_home {
-    grid-area: main;
-    display:grid;
-    justify-content:center;
-    align-items: baseline;
+.menu_item > p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
 }
-
+.menu_item   span {
+  font-size: 0.9rem;
+  color: rgb(248, 62, 62);
+}
+.item {
+font-weight: bold;
+}
+.description {
+  color: rgb(73, 54, 54) ;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+.menu_category {
+  display: inline-block;
+  color: whitesmoke;
+  background-color: rgb(248, 62, 62);
+}
+.wine  {
+  color: rgb(73, 54, 54) ;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.wine_price {
+  color: rgb(248, 62, 62) ;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
 /* =================== BUTTON ======================*/
 
 #reservation_button {
@@ -231,7 +271,8 @@ main {
     border-radius: 2px;
 }
 
-
+.upper_case {
+  text-transform: uppercase;
 }
 /* =================== UNIVERSAL SETTINGS ======================*/
 .white_border {
@@ -240,11 +281,12 @@ main {
     box-shadow: 0px 0px 8px 1px #000000;
 }
 p {
-    font-family: var(--text1);
-    text-transform: uppercase; 
+    font-family: var(--text1); 
     font-size: 0.8rem;    
-    color: black;    
+    color: black;   
+    padding: 1rem; 
 }
+
 /* =================== CARDS ======================*/
 
 
