@@ -271,7 +271,7 @@ font-weight: bold;
     transition: 0.4s;
     font-family:var(--text1);
     font-size: 0.8rem;
-    background-color: rgb(248, 62, 62);
+    background-color: rgb(194, 44, 44);
     -webkit-box-shadow: 0px 0px 8px 1px #000000; 
     box-shadow: 0px 0px 8px 1px #000000;
     color: white;
