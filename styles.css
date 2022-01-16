@@ -84,7 +84,7 @@ background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,
 .bgimg {
     background-position: center;
     background-size: cover;    
-    background-image:linear-gradient(315deg, rgba(0, 0, 0, 0.219) 0%, rgba(0,0,0,0.8) 100%), url(images/index_large.jpg);
+    background-image:linear-gradient(315deg, rgba(0, 0, 0, 0.219) 0%, rgba(0,0,0,0.8) 100%), url(images/index_large.webp);
     min-height: 100%;
   }
   
@@ -166,6 +166,7 @@ main div {
 @media screen and (min-width: 641px) {
   .grid-row-3col {
     display: grid;
+    max-width: 1000px;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto ;
   }
@@ -180,9 +181,17 @@ main div {
   }
 } 
 
+/*for mobile*/
+@media screen and (max-width: 640px) {
+  .grid-row-3col, .grid-row-2col {
+    max-width: 350px;
+  }
+} 
+
 
 .grid-row-3col { 
   margin: 1rem auto 0 auto ;
+
 }
 
 .grid-row-2col { 
@@ -297,9 +306,9 @@ p {
     padding: 1rem; 
 }
 
-.img_desctop {
-  max-width: 490px;
-  max-height: 368px;
+.img_desktop {
+  max-width: 280px;
+  max-height: 210px;
 }
 /* =================== CARDS ======================*/
 
