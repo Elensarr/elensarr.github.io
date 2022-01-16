@@ -221,7 +221,7 @@ border-bottom: black 2px solid;
 }
 
 .compact {
-  font-size: 0.8rem;
+font-size: 0.8rem;
 letter-spacing: 0.2rem;
 word-spacing: 0;
 text-decoration: none;
