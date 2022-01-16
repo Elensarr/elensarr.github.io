@@ -297,6 +297,10 @@ p {
     padding: 1rem; 
 }
 
+.img_desctop {
+  max-width: 490px;
+  max-height: 368px;
+}
 /* =================== CARDS ======================*/
 
 
