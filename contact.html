@@ -16,37 +16,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
    
-   <script>
-       //determines if the restaurant is open or closed based on
-       // curent time and day of the week
-       function isOpen() {
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-           var isOpen = "Open";
-           var today = new Date();
-           var opens = new Date();
-           opens.setHours(17,0,0); // 5.30 pm
-           if (today.getDay()==1 || today.getDay()==2 ) {
-               isOpen="Closed";
-           } else {
-               if (today.getHours()< opens) {
-                   isOpen = "Open from 5pm";
-                }  
-           }
-           document.getElementById("availability_info").innerHTML = "Today, "+
-            today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable();
-       }
-       //function to send request to server to check if tables are avialable
-       //will be developed later
-       // for now just return hardcored value "available"
-       function tablesAvailable() {
-           return "available";
-       }     
-       
-   </script>
+   
    
    
     </head>
-    <body  onload="isOpen()">
+    <body >
     
     <!-- NAVIGARION BAR (for desktop)-->
     <nav >
