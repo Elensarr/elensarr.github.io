@@ -166,9 +166,12 @@ main div {
 @media screen and (min-width: 641px) {
   .grid-row-3col {
     display: grid;
+    display: -ms-grid; /* support grid in IE10+*/
     max-width: 1000px;
     grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: repeat(3, 1fr);
     grid-auto-rows: auto ;
+    -ms-grid-rows: auto;
   }
 } 
 
@@ -177,9 +180,12 @@ main div {
   .grid-row-2col {
     
     max-width: 1000px;
-    display: grid;
+    display: grid;    
+    display: -ms-grid; /* support grid in IE10+*/
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: repeat(2, 1fr);
     grid-auto-rows: auto ;
+    -ms-grid-rows: auto;
   }
 } 
 
@@ -311,6 +317,11 @@ p {
 .img_desktop {
   max-width: 280px;
   max-height: 210px;
+  width: 100%;
+}
+
+.border {
+  border: solid rgb(70, 70, 70) 1px;
 }
 /* =================== CARDS ======================*/
 
