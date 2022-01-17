@@ -43,43 +43,42 @@
         </head>
 
         <body onload="isOpen()" >
-            <!-- Header with image -->
-            <header role="banner" class="bgimg w3-display-container" id="home">    
-                <!-- NAVIGARION BAR (for desktop)-->
-                <nav  role="navigation">
-                    <div class="w3-bar">
-                        <div class="w3-sand  w3-bar-item w3-button  w3-hover-sand "> HOME </div>   <!-- selection for the active page -->	
-                        <a role="link" class="w3-bar-item w3-black  w3-button  w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
-                        <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
-                        <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
-                        <a role="link" class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
-                        <a role="link" href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
-                    </div>
 
-                    <!-- Collapsed menu on small screens-->            
-                    <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
-                        <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
-                        <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
-                        <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
-                        <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
-                    </div>
-
-                    <!-- Function to collapse navbar on small screens-->
-                    <script>
-                        function myFunction() {
-                            var x = document.getElementById("nav_small");
-                            if (x.className.indexOf("w3-show") == -1) {
-                                x.className += " w3-show";
-                            } else { 
-                                x.className = x.className.replace(" w3-show", "fccc");
-                            }
-                        }
-                    </script>
-                </nav>	
-                
-                <div class= "w3-right w3-hover-none w3-text-sand w3-mobile w3-hide-small">
-                    <p class="w3-text-sand compact">1 ISLAND STREET KERIKERI, 09 401 4019, INFO@THEHAUKAI.COM</p>
+            <!-- NAVIGARION BAR (for desktop)-->
+            <nav  role="navigation">
+                <div class="w3-top w3-bar">
+                    <div class="w3-sand  w3-bar-item w3-button  w3-hover-sand "> HOME </div>   <!-- selection for the active page -->	
+                    <a role="link" class="w3-bar-item w3-black  w3-button  w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+                    <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                    <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
+                    <a role="link" class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+                    <a role="link" href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
                 </div>
+
+                <!-- Collapsed menu on small screens-->            
+                <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                    <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
+                    <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
+                    <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
+                    <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
+                </div>
+
+                <!-- Function to collapse navbar on small screens-->
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("nav_small");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else { 
+                            x.className = x.className.replace(" w3-show", "fccc");
+                        }
+                    }
+                </script>
+            </nav>
+
+            <!-- Header with image -->
+            <header role="banner" class="bgimg w3-display-container" id="home"> 
+                
                 <div class="w3-display-middle w3-center">
                     <h1 role="heading"  aria-level="1" class="w3-text-white" id="logo_main">HAUKAI</h1>
                     <h3 role="heading" aria-level="3" id="slogan_main">Explore Maori food traditions</h3>

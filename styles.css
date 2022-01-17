@@ -43,6 +43,9 @@ body, html {
   html {
 background: rgb(22,22,22);
 background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,0,1) 100%);
+-ms-text-size-adjust: 100%;
+text-size-adjust:100%;
+-webkit-text-size-adjust: 100%;
 }
 
 /* =================== NAVIGATION BAR ======================*/
@@ -162,7 +165,7 @@ main div {
 /* ROW OF 3 COLUMNS WITH EQUAL HEIGHT AND VERTICALLY CENTERED*/
 
 
-/*for desktops and tablets only*/
+/*for desktops and tablets */
 @media screen and (min-width: 641px) {
   .grid-row-3col {
     display: grid;
@@ -175,10 +178,9 @@ main div {
   }
 } 
 
-/*for desktops and tablets only*/
+/*for desktops and tablets */
 @media screen and (min-width: 641px) {
-  .grid-row-2col {
-    
+  .grid-row-2col {    
     max-width: 1000px;
     display: grid;    
     display: -ms-grid; /* support grid in IE10+*/
@@ -230,7 +232,7 @@ border-bottom: black 2px solid;
 
 .compact {
 font-size: 0.8rem;
-letter-spacing: 0.2rem;
+letter-spacing: 0.05rem;
 word-spacing: 0;
 text-decoration: none;
 }
@@ -337,12 +339,7 @@ p {
     left: 0;
     z-index: 1;}
 
-    #copiright {
-        grid-column: span 3;
-        text-align: center;
-        line-height: 2rem;
-        margin-top: 1rem;
-    }
+    
 /* =================== FOOTER ======================*/
   footer {
     background-color: black;
