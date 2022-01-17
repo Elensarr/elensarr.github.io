@@ -1,1 +1,273 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="styles.css"> <title>HAUKAI - Home page </title> <link rel="shortcut icon" href="#"> <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> <script>//determines if the restaurant is open or closed based on // curent time and day of the week function isOpen(){var options={weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}; var isOpen="Open"; var today=new Date(); var opens=new Date(); opens.setHours(17,0,0); // 5.00 pm if (today.getDay()==1 || today.getDay()==2 ){isOpen="Closed";}else{if (today.getHours()< opens){isOpen="Open from 5pm";}}document.getElementById("availability_info").innerHTML="<span >Today, "+ today.toLocaleDateString("en-US", options)+"<br>We are "+isOpen+"<br>Tables "+tablesAvailable()+"</span>";}//function to send request to server to check if tables are avialable //will be developed later // for now just return hardcored value "available" function tablesAvailable(){return "available";}</script> </head> <body onload="isOpen()" > <header class="bgimg w3-display-container" id="home"> <nav > <div class="w3-bar"> <div class="w3-sand w3-bar-item w3-button w3-hover-sand " > HOME </div><a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href="./contact.html" > CONTACTS </a> <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href="./hours.html" > HOURS </a> <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href="./menu.html" > FOOD </a> <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href="./reservation.html">RESERVATION</a> <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a> </div><div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium"> <a class="w3-bar-item w3-button w3-hover-sand" href="./contact.html" > CONTACTS </a> <a class="w3-bar-item w3-button w3-hover-sand" href="./hours.html" > HOURS </a> <a class="w3-bar-item w3-button w3-hover-sand" href="./menu.html" > FOOD </a> <a class="w3-bar-item w3-button w3-hover-sand" href="./reservation.html">RESERVATION</a> </div><script>function myFunction(){var x=document.getElementById("nav_small"); if (x.className.indexOf("w3-show")==-1){x.className +=" w3-show";}else{x.className=x.className.replace(" w3-show", "fccc");}}</script> </nav> <div class="w3-display-topright w3-button w3-text-sand w3-mobile w3-hide-small"> <p class="w3-text-sand compact">1 ISLAND STREET KERIKERI, 09 401 4019, INFO@THEHAUKAI.COM</p></div><div class="w3-display-middle w3-center"> <p class="w3-text-white" id="logo_main">HAUKAI</p><p id="slogan_main">Explore Maori food traditions</p><div class="w3-center" style="opacity: 1;"> <p><a class="w3-button w3-hover-sand" id="reservation_button" href="./reservation.html">MAKE A RESERVATION</a> </p></div></div></header> <main > <div class="grid-row-3col" > <div class="col" > <div class=" card shadow w3-hover-white "> <div style='border: solid rgb(70, 70, 70) 1px;'> <a href="./reservation.html" id="availability_info" > <span style="display: block;">We are open WEDNESDAY-SUNDAY <br>from 5pm till late </span> </a> </div></div></div><div class="col" > <div class=" card shadow w3-hover-white "> <div> <img src="./images/maori.webp" alt="Alps" style="width:100%" class="img_desktop"> <h2> <a href="https://www.newzealand.com/int/maori-culture/" > <span >Learn more about Māori culture </span> </a> </h2> </div></div></div><div class="col" > <div class=" card shadow w3-hover-white upper_case "> <div style='border: solid rgb(70, 70, 70) 1px;'> <h2> Opening hours</h2> <p> Monday: Closed<br>Tuesday: Closed<br>Wednesday: 5pm-11pm<br>Thursday: 5pm-11pm<br>Friday: 5pm-11pm<br>Saturday: 5pm-11pm<br>Sunday: 5pm-11pm<br></div></div></div></div><div class="grid-row-3col" > <div class="col" > <div class=" card shadow w3-hover-white "> <div> <img src="./images/menu.webp" alt="Table with plates with fancy served food on them" style="width:100%"> <h2> <a href="./menu.html" > <span>Take a look at our menu </span> </a> </h2> </div></div></div><div class="col" > <div class=" card shadow w3-hover-whit upper_case "> <div style='border: solid rgb(70, 70, 70) 1px;'> <div id="address"> <h2> <a class="compact" href="./contact.html" > <span >1 Island Street <br>Kerikeri, Bay of Islands <br>09 401 4019, </span> </a> <a class="compact" href="mailto:info@thehaukai.com"><span> info@thehaukai.com</span></a> </h2> </div></div></div></div><div class="col" > <div class=" card shadow w3-hover-white "> <div> <img src="./images/booknow.webp" alt="Alps" style="width:100%"> <h2> <a href="./reservation.html" > <span >Make a reservation </span> </a> </h2> </div></div></div></main> <footer> <div class="w3-container w3-center"> <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button> <div id="id01" class="w3-modal"> <div class="w3-modal-content w3-animate-opacity"> <div class="w3-container w3-black"> <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span> <h2>Privacy Statement</h2> </div><div class="w3-container"> <p class="modal"> <br>We collect personal information from you, including information about your:<br><span class="emphasized">- name<br>- contact information<br>- location<br></span> We collect your personal information in order to to secure booking made via our web application and collect your location to make sure Google directions are correct. <br>Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant. <br>We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it . <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits. <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br></p><button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button> <br><br></div></div><script>// Get the modal var modal=document.getElementById('id01'); // When the user clicks anywhere outside of the modal, close it window.onclick=function(event){if (event.target==modal){modal.style.display="none";}}</script> </div><div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br></p></div></div></footer> </body></html> 
+<!DOCTYPE html>
+<html  lang="en" role=document>
+     <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet"  href="styles.css">
+        
+        <!-- Page title -->
+		<title>HAUKAI - Home page </title>
+
+        <!-- Fixes 404error for favcon as I don't use any in the app-->
+        <link rel="shortcut icon" href="#">
+        
+        <!-- W3.CSS framework import-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Web font import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        
+       
+   <script>
+       //determines if the restaurant is open or closed based on
+       // curent time and day of the week
+       function isOpen() {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+           var isOpen = "Open";
+           var today = new Date();
+           var opens = new Date();
+           opens.setHours(17,0,0); // 5.00 pm
+           if (today.getDay()==1 || today.getDay()==2 ) {
+               isOpen="Closed";
+           } else {
+               if (today.getHours()< opens) {
+                   isOpen = "Open from 5pm";
+                }  
+           }
+          document.getElementById("availability_info").innerHTML = "<span >Today, "+
+            today.toLocaleDateString("en-US", options)+"<br> We are "+isOpen+"<br> Tables "+tablesAvailable()+"</span>";
+       }
+       //function to send request to server to check if tables are avialable
+       //will be developed later
+       // for now just return hardcored value "available"
+       function tablesAvailable() {
+           return "available";
+       }     
+       
+   </script>
+   
+   
+    </head>
+    <body onload="isOpen()" >
+    
+        
+
+        <!-- Header with image -->
+        <header role=banner class="bgimg w3-display-container" id="home">    
+            <!-- NAVIGARION BAR (for desktop)-->
+        <nav  role=navigation>
+            <div class="w3-bar">
+                <div class="w3-sand  w3-bar-item w3-button  w3-hover-sand "  > HOME </div>   <!-- selection for the active page -->	
+                <a role=link class="w3-bar-item w3-black  w3-button  w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+                <a role=link class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                <a role=link class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
+                <a role=link class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+                <a role=link href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+            </div>
+
+            <!-- Collapsed menu on small screens-->            
+            <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                
+                <a role=link class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
+                <a role=link class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
+                <a role=link class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
+                <a role=link class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
+            </div>
+
+            <!-- Function to collapse navbar on small screens-->
+            <script>
+                function myFunction() {
+                var x = document.getElementById("nav_small");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "fccc");
+                }
+                }
+            </script>
+        </nav>	
+            
+            <div class= "w3-right w3-hover-none w3-text-sand w3-mobile w3-hide-small">
+                <p class="w3-text-sand compact">1 ISLAND STREET KERIKERI, 09 401 4019, INFO@THEHAUKAI.COM</p>
+            </div>
+            <div class="w3-display-middle w3-center">
+                <h1 role=heading, aria-level=1 class="w3-text-white" id="logo_main">HAUKAI</h1>
+                <h3 role=heading, aria-level=3 id="slogan_main">Explore Maori food traditions</h3>
+                <!-- BOOK BUTTON -->
+                <div class="w3-center">
+                    <p><a role=link class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
+                </div>
+            </div>
+            
+        </header>
+
+            
+               
+
+        <!--MAIN -->
+        <main role=main >
+
+            <div class="grid-row-3col"  > 
+            <!-- CURENT STATUS -->
+                <div class="col" >
+                    <div   class=" card shadow w3-hover-white "> 
+                        <div class="border">
+                            <a role=link href = "./reservation.html" id="availability_info" > 
+                                <span >We are open WEDNESDAY-SUNDAY <br>from 5pm till late </span>
+                            </a> 
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MORE INFO ABOUT MAORI -->
+                <div class="col" >
+                    <div   class=" card shadow w3-hover-white "> 
+                        <div>
+                            <img role=presentation src="./images/maori.webp" alt="person holding afern leaf"  class="img_desktop">
+                            <h2 role=heading, aria-level=2>  <a role=link href = "https://www.newzealand.com/int/maori-culture/"  > 
+                                <span >Learn more </span>
+                            </a>  </h2>
+                            <!-- Photo is taken here, free licence https://www.pexels.com/photo/person-holding-brown-and-green-leaf-tree-8763778/ -->
+                        <!--Photo by Duane Mendes from Pexels-->
+                        
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <!-- OPENING HOURS -->
+                <div  class="col" > 
+                    <div class="  card shadow w3-hover-white upper_case "> 
+                        <div class="border">
+                            <h2 role=heading, aria-level=2> Opening hours</h2>
+                            <p> Monday: Closed<br>
+                            Tuesday: Closed<br>
+                            Wednesday: 5pm-11pm<br>
+                             Thursday: 5pm-11pm<br>
+                             Friday: 5pm-11pm<br>
+                            Saturday: 5pm-11pm<br>
+                             Sunday: 5pm-11pm<br>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="grid-row-3col"  > 
+                 <!-- MENU -->
+                    <div class="col" >
+                        <div   class=" card shadow w3-hover-white "> 
+                            <div>
+                                <img role=presentation src="./images/menu.webp" alt="Table with plates with fancy served food on them" >
+                                
+                                <h2 role=heading, aria-level=2>  <a role=link href = "./menu.html"  > 
+                                    <span>Take a look at our menu </span>
+                                </a>  </h2>
+                               <!-- Photo is taken here, free licence https://www.pexels.com/photo/bowl-chairs-cooking-cuisine-262918/ -->
+                            </div>
+                        </div>
+                    </div>
+    
+                     <!-- LOCATION -->
+                <div class="col" >
+                    <div class=" card shadow w3-hover-whit upper_case  "> 
+                        <div class="border"> 
+                            <div id="address">
+                                
+                            <h2 role=heading, aria-level=2>  <a role=link class="compact" href = "./contact.html"  > 
+                                <span >1 Island Street <br> Kerikeri, Bay of Islands <br>09 401 4019,
+                                      </span>
+                                </a>  
+                                <a role=linkclass="compact" href = "mailto:info@thehaukai.com"><span> info@thehaukai.com</span></a>
+                            </h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                    <!-- RESERVATION -->
+                    <div  class="col" > 
+                        <div class="  card shadow w3-hover-white  "> 
+                            <div>
+                                <img role=presentation src="./images/booknow.webp" alt="A table with plates and cutlery ready" >
+                                <h2 role=heading, aria-level=2>  <a role=link href = "./reservation.html"  > 
+                                    <span >Make a reservation </span>
+                                </a>  </h2>
+                                <!-- Photo is taken here, under  free licence https://www.pexels.com/photo/menu-restaurant-france-eating-9315/ -->
+                                
+                   
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                    
+
+
+        </main>
+        
+        <footer role=contentinfo>
+                <div class="w3-container w3-center">
+
+                    <button role=button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
+                  
+                    <div id="id01" class="w3-modal">
+                      <div class="w3-modal-content w3-animate-opacity">
+
+
+                        <div class="w3-container w3-black">
+                            <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                            <h2 role=heading, aria-level=2 >Privacy Statement</h2>
+                        </div>
+                      
+                          <div class="w3-container">
+                            <p class="modal">
+                                <br> We collect personal information from you, including information about your:<br>
+                                <span class="emphasized">- name<br>
+                                - contact information<br>
+                                - location<br></span>
+                                We collect your personal information in order to to secure booking made via our web application and
+                                collect your location to make sure Google directions are correct. <br>
+                                Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                                If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                                <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                                
+                                <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                                <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                                <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                            </p>
+                            <!-- Close button-->
+                            <button role=button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                            <br><br>
+                        </div>
+                      </div>
+                      <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                          if (event.target == modal) {
+                            modal.style.display = "none";
+                          }
+                        }
+                        </script>
+                    </div>
+                    <!-- Copuright-->
+                    <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+                  </div>        
+            </footer>
+
+
+  
+
+    </body>
+</html>
+   
+
