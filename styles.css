@@ -1,27 +1,8 @@
 
 :root{
-    /* ================= VARIABLES ===================================*/
-    /* CHANGE THIS IF YOU WANT TO  MODIFY COLOURS, FONTS, AND FONT SIZES */
-    
-    /* colours */
-    --nav_buttons_colour: rgba(0, 0, 0, 0.4);      
-    --nav_buttons_colour_active: white; 
-    --nav_buttons_colour_hover: white;
-    --nav_text_colour: white;
-    --nav_text_colour_active: black;
-    --nav_text_colour_hover: black;
-    --logo_background:rgba(0, 0, 0, 0.5);
-    --footer_background:rgba(0, 0, 0, 0.5);
     /*fonts*/
     --logo: 'Patrick Hand', cursive;
     --text1: 'Heebo', Helvetica, sans-serif; 	/*menu headlines*/
-    
-    /* fonts colours */
-    --main: white;
-    --secondary: black;
-    
-    /* font sizes */
-    
     }
 
 /*=================== default settings ============================ */
@@ -29,37 +10,34 @@
 	box-sizing:border-box;	/*box size includes padding and borders */
 	padding:0;
 	margin:0;
-	color: var(--main);
+	color: white;
 }
 body, html {
-    height: 100%;
-    
+  height: 100%;    
   }
-
 
 /* =================== BACKGROUND ======================*/
 
-
-  html {
-background: rgb(22,22,22);
-background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,0,1) 100%);
--ms-text-size-adjust: 100%;
-text-size-adjust:100%;
--webkit-text-size-adjust: 100%;
+html {
+  background: rgb(22,22,22);
+  background: linear-gradient(315deg, rgba(0,0,0,0.7011846975118172) 0%, rgba(0,0,0,1) 100%);
+  -ms-text-size-adjust: 100%;
+  text-size-adjust:100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* =================== NAVIGATION BAR ======================*/
 
 /*Navigation bar links */
-   nav a, nav div {
-	font-size: 0.8rem;
-    word-spacing: 0.4rem;
-    letter-spacing: 0.4rem;
-	font-family:var(--text1);   	    
-}
-    a:hover {
-        transition: 0.2s;
-    }
+nav a, nav div {
+  font-size: 0.8rem;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.4rem;
+  font-family:var(--text1);   	    
+  }
+a:hover {
+  transition: 0.2s;
+  }
 
 /* =================== MEDIA QUERIES ======================*/
 /*Large and medium screens*/
@@ -99,7 +77,7 @@ text-size-adjust:100%;
 }
 /*Slogan on home pages*/
 #slogan_main {
-    color: var(--main);
+    color: white;
     font-size: 0.8rem;
     font-family:var(--text1);
     text-transform: uppercase;
@@ -109,11 +87,7 @@ text-size-adjust:100%;
     background-color: black;
 }
 
-
-
-
-main h2{
-    
+main h2{    
     letter-spacing: 0.3rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -128,7 +102,6 @@ h1.border_bottom {
 }
 
 main h1, header h1{
-    
   letter-spacing: 0.4rem;
   font-family: var(--text1);
   text-transform: uppercase;  
@@ -139,9 +112,7 @@ main h1, header h1{
   font-family: var(--logo);
 }
 
-
-main a, main a:visited {
-    
+main a, main a:visited {    
     word-spacing: 0;
     text-transform: uppercase;
     text-decoration: none;   
@@ -163,8 +134,6 @@ main div {
 }
 
 /* ROW OF 3 COLUMNS WITH EQUAL HEIGHT AND VERTICALLY CENTERED*/
-
-
 /*for desktops and tablets */
 @media screen and (min-width: 641px) {
   .grid-row-3col {
@@ -198,27 +167,24 @@ main div {
   }
 } 
 
-
 .grid-row-3col { 
   margin: 1rem auto 0 auto ;
-
 }
 
 .grid-row-2col { 
   margin: 1rem auto 0 auto ;
 }
 .col {   
-    text-align: center;
-    padding: 0.9rem;
+  text-align: center;
+  padding: 0.9rem;
 }
 .card {
-    background-color: rgb(255, 247, 233);
-    padding: 0.8rem;
-    justify-items: center;
-    height:100%;
-    display: table; width:100%;    
+  background-color: rgb(255, 247, 233);
+  padding: 0.8rem;
+  justify-items: center;
+  height:100%;
+  display: table; width:100%;    
 }
-
 
 .card > div {
   align-items: center;
@@ -226,7 +192,7 @@ main div {
   vertical-align: middle;   
 }
 
-h1 a:hover {
+h2 a:hover {
 border-bottom: black 2px solid;
 }
 
@@ -279,8 +245,8 @@ font-weight: bold;
   padding: 0;
   margin: 0;
 }
-/* =================== BUTTON ======================*/
 
+/* =================== BUTTON ======================*/
 #reservation_button {
     text-transform: uppercase;
     margin-top: 2rem;
@@ -321,37 +287,22 @@ p {
 }
 
 .border {
-  border: solid rgb(70, 70, 70) 1px;
-}
-/* =================== CARDS ======================*/
-
-
-
-  
-  /*Important:*/
-.link-spanner{
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-    z-index: 1;}
-
+  border: solid rgb(70, 70, 70) 1px;}
     
 /* =================== FOOTER ======================*/
-  footer {
-    background-color: black;
-    padding: 2rem;
-    
-  }
-  footer > p {
-    color: white;}
+footer {
+  background-color: black;
+  padding: 2rem;
+}
 
- p.modal {
+footer > p {
+  color: white;}
+
+p.modal {
 text-transform: none;
 text-align: left;
 color: black;
-  }
+}
 
 .bolded {
   font-weight: bold;
