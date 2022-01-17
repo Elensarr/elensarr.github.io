@@ -1,70 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-     <head>
+<html lang="en"  role="document">
+    <head>
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <!-- Page title -->
 		<title>HAUKAI - OUR MENU </title>
-
         <!-- Web font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-   
         <!-- W3.CSS framework import-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- 
-   
-   
     </head>
-    <body  >
-    
-    
-    <nav >
-        <div class="w3-bar  ">
-            <a class=" w3-bar-item w3-black w3-button  w3-hover-sand w3-hide-small "  href = "./index.html" > HOME </a> 
-            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
-            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
-            
-            <div class="w3-sand  w3-bar-item w3-button  "  > FOOD </div>   <!-- selection for the active page -->	
-             
-            <a class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
-        </div>
-
-        <!-- Collapsed menu on small screens-->            
-        <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 	
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
-        </div>    
+    <body>
+        <nav role="navigation">
+            <div class="w3-bar w3-top ">
+                <a role="link" class=" w3-bar-item w3-black w3-button  w3-hover-sand w3-hide-small "  href = "./index.html" > HOME </a> 
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                <div class="w3-sand  w3-bar-item w3-button  "  > FOOD </div>   <!-- selection for the active page -->	
+                <a role="link" class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+                <a role="link" href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+            </div>
+            <!-- Collapsed menu on small screens-->            
+            <div id="nav_small" class=" w3-top w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 	
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
+            </div>    
             <!-- Function to collapse navbar on small screens-->
             <script>
                 function myFunction() {
-                var x = document.getElementById("nav_small");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else { 
-                    x.className = x.className.replace(" w3-show", "fccc");
-                }
-                }
+                    var x = document.getElementById("nav_small");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else { 
+                        x.className = x.className.replace(" w3-show", "fccc");
+                    }
+                    }
             </script>
         </nav>
 
-        <main >
-            <div >
-                <h1 class="border_bottom">HAUKAI | MENU </h1>
-            </div>
+        <header role="banner">
+            <h1 role="heading"  aria-level="1" class="border_bottom" >HAUKAI | MENU</h1>
+        </header>
 
+        <main role="main">
             <div class="grid-row-3col"  > 
                 <!-- APPETIZERS -->
                     <div class="col" >
                         <div   class=" card  shadow w3-hover-white "> 
                             <div style="vertical-align: top;">
-                                <h2 class="menu_category"> APPETIZERS</h2>
+                                <h2 role="heading"  aria-level="2" class="menu_category"> APPETIZERS</h2>
                                 <div class="menu_item">
                                     <p class="item">REWENA BREAD <span>10</span> </p>
                                     <p class="description">Traditional Māori bread</p>
@@ -94,21 +83,18 @@
                         <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
                             <div style="vertical-align: top;"> 
                                 <div >
-                                    <img src="./images/lamb.webp" alt="Lamb cousine with garlic and wild herbs" style="width: 100%;">
-
-                                </div>
-                                <!--https://www.pexels.com/photo/food-plate-restaurant-new-york-9515248/-->
-                                
+                                    <!--https://www.pexels.com/photo/food-plate-restaurant-new-york-9515248/-->
+                                    <img role="presentation" src="./images/lamb.webp" alt="Lamb cousine with garlic and wild herbs" style="width: 100%;">
+                                </div>                                
                             </div>
                         </div>
                     </div>
     
-                
-                <!-- MAIN -->
+                    <!-- MAIN -->
                     <div class="col" >
                         <div   class=" card  shadow w3-hover-white "> 
                             <div style="vertical-align: top;">
-                                <h2 class="menu_category"> MAINS</h2>
+                                <h2 role="heading"  aria-level="2" class="menu_category"> MAINS</h2>
                                 <div class="menu_item">
                                     <p class="item">FISH OF THE DAY <span>25</span> </p>
                                     <p class="description">Beer battered fish and kumara fries, served with a side salad and homemade tartare</p>
@@ -145,53 +131,49 @@
                     <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
                         <div style="vertical-align: top;"> 
                             <div >
-                                <img src="./images/appetizers.webp" alt="Mussels, raw fish, seefood and sauses" style="width: 100%;">
-
+                                <img role="presentation"src="./images/appetizers.webp" alt="Mussels, raw fish, seefood and sauses" style="width: 100%;">
                             </div>
-                            
                         </div>
                     </div>
                 </div>
     
                 
                 <!-- DESSERTS -->
-                    <div class="col" >
-                        <div   class=" card  shadow w3-hover-white "> 
-                            <div style="vertical-align: top;">
-                                <h2 class="menu_category"> DESSERTS</h2>
-                                <div class="menu_item">
-                                    <p class="item">KĀPITI ICE CREAM <span>10</span> </p>
-                                    <p class="description">Check for daily specials</p>
-                                </div>
-                                <div class="menu_item">
-                                    <p class="item">STEAM PUDDING <span>12</span> </p>
-                                    <p class="description">Golden syrup flavoured steam pudding, served with vanilla ice cream</p>
-                                </div>
-                                <div class="menu_item">
-                                    <p class="item">MINI PAVLOVA <span>16</span> </p>
-                                    <p class="description">Mini Pavlova served with kawakawa and lemon infused cream and fresh fruit</p>
-                                </div>
-                                <div class="menu_item">
-                                    <p class="item">BANOFFEE PIE <span>16</span> </p>
-                                    <p class="description">Toffee, fresh bananas and fresh cream</p>
-                                </div>
+                <div class="col" >
+                    <div   class=" card  shadow w3-hover-white "> 
+                        <div style="vertical-align: top;">
+                            <h2 role="heading"  aria-level="2" class="menu_category"> DESSERTS</h2>
+                            <div class="menu_item">
+                                <p class="item">KĀPITI ICE CREAM <span>10</span> </p>
+                                <p class="description">Check for daily specials</p>
+                            </div>
+                            <div class="menu_item">
+                                <p class="item">STEAM PUDDING <span>12</span> </p>
+                                <p class="description">Golden syrup flavoured steam pudding, served with vanilla ice cream</p>
+                            </div>
+                            <div class="menu_item">
+                                <p class="item">MINI PAVLOVA <span>16</span> </p>
+                                <p class="description">Mini Pavlova served with kawakawa and lemon infused cream and fresh fruit</p>
+                            </div>
+                            <div class="menu_item">
+                                <p class="item">BANOFFEE PIE <span>16</span> </p>
+                                <p class="description">Toffee, fresh bananas and fresh cream</p>
                             </div>
                         </div>
                     </div>
+                 </div>
 
-                    <!-- PHOTO -->
-                    <div class="col w3-hide-small" >
-                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
-                            <div style="vertical-align: top;"> 
-                                <div >
-                                    <img src="./images/pavlova.webp" alt="Mini pavlova decorated with straberries" style="width: 100%;">
-
-                                </div>
+                <!-- PHOTO -->
+                <div class="col w3-hide-small" >
+                    <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                        <div style="vertical-align: top;"> 
+                            <div >
                                 <!-- https://www.pexels.com/photo/tasty-meringue-dessert-decorated-with-strawberries-in-cafeteria-6310078/-->
-                                
+                                <img role="presentation" src="./images/pavlova.webp" alt="Mini pavlova decorated with straberries" style="width: 100%;">
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="grid-row-3col"  > 
@@ -199,7 +181,7 @@
                 <div class="col" >
                     <div   class=" card  shadow w3-hover-white "> 
                         <div style="vertical-align: top;">
-                            <h2 class="menu_category"> RED WINE</h2>
+                            <h2 role="heading"  aria-level="2" class="menu_category"> RED WINE</h2>
                             
                             <table class="w3-table" >
                                 <tr>
@@ -247,7 +229,7 @@
                 <div class="col" >
                     <div   class=" card  shadow w3-hover-white "> 
                         <div style="vertical-align: top;">
-                            <h2 class="menu_category"> WHITE WINE</h2>
+                            <h2 role="heading"  aria-level="2" class="menu_category"> WHITE WINE</h2>
                             
                             <table class="w3-table" >
                                 <tr>
@@ -290,33 +272,25 @@
                         </div>
                     </div>
                 </div>
-    
-                
-                
-
-                    <!-- PHOTO -->
-                    <div class="col w3-hide-small" >
-                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
-                            <div style="vertical-align: top;"> 
-                                <div >
-                                    <img src="./images/wine.webp" alt="cellar with wine bottles" style="width: 100%;">
-
-                                </div>
+                <!-- PHOTO -->
+                <div class="col w3-hide-small" >
+                    <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                        <div style="vertical-align: top;"> 
+                            <div >
                                 <!-- https://www.pexels.com/photo/cellar-with-wine-bottles-774455/-->
-                                
-                            </div>
+                                <img role="presentation" href="./images/wine.webp" alt="cellar with wine bottles" style="width: 100%;">
+                            </div>                               
                         </div>
                     </div>
+                </div>
             </div>
 
-
             <div class="grid-row-3col"  > 
-                <!-- BEVERAGES -->
-               
+                <!-- BEVERAGES -->               
                 <div class="col" >
                     <div   class=" card  shadow w3-hover-white "> 
                         <div style="vertical-align: top;">
-                            <h2 class="menu_category"> BEER AND CIDER</h2>
+                            <h2 role="heading"  aria-level="2" class="menu_category"> BEER AND CIDER</h2>
                             
                             <table class="w3-table" >
                                 <tr >
@@ -355,113 +329,101 @@
                         </div>
                     </div>
                 </div>
-    
-                
-                
-
-                    <!-- PHOTO -->
-                    <div class="col w3-hide-small" >
-                        <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
-                            <div style="vertical-align: top;"> 
-                                <div >
-                                    <img src="./images/coffee.webp" alt="Cup of coffee with froth" style="width: 100%;">
-
-                                </div>
+                 <!-- PHOTO -->
+                <div class="col w3-hide-small" >
+                    <div class=" card shadow w3-hover-white upper_case " style="height: auto;"> 
+                        <div style="vertical-align: top;"> 
+                            <div >
                                 <!-- https://www.pexels.com/photo/cup-of-delicious-coffee-with-froth-on-breakfast-in-cafeteria-1170659/-->
-                                
+                                <img role="presentation" src="./images/coffee.webp" alt="Cup of coffee with froth" style="width: 100%;">
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col" >
-                        <div   class=" card  shadow w3-hover-white "> 
-                            <div style="vertical-align: top;">
-                                <h2 class="menu_category"> NON-ALCOHOLIC</h2>
+                </div>
+                
+                <div class="col" >
+                    <div   class=" card  shadow w3-hover-white "> 
+                        <div style="vertical-align: top;">
+                            <h2 role="heading"  aria-level="2" class="menu_category"> NON-ALCOHOLIC</h2>
                                 
-                                <table class="w3-table" >
-                                    <tr >
-                                        <td><p class="wine">Mineral water</p></td>
-                                        <td><p class="wine_price">4.00</p></td>
-                                    </tr>
-                                    <tr >
-                                        <td><p class="wine">Soft drinks </p></td>
-                                        <td><p class="wine_price">4.00</p></td>
-                                    </tr>
-                                    <tr >
-                                        <td><p class="wine">Juice</p></td>
-                                        <td><p class="wine_price">4.00</p></td>
-                                    </tr>
-                                    <tr >
-                                        <td><p class="wine">Coffee</p></td>
-                                        <td><p class="wine_price">4.50</p></td>
-                                    </tr>
-                                    <tr >
-                                        <td><p class="wine">Tea</p></td>
-                                        <td><p class="wine_price">3.50</p></td>
-                                    </tr>  
-                                </table>
-                            </div>
+                            <table class="w3-table" >
+                                <tr >
+                                    <td><p class="wine">Mineral water</p></td>
+                                    <td><p class="wine_price">4.00</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Soft drinks </p></td>
+                                    <td><p class="wine_price">4.00</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Juice</p></td>
+                                    <td><p class="wine_price">4.00</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Coffee</p></td>
+                                    <td><p class="wine_price">4.50</p></td>
+                                </tr>
+                                <tr >
+                                    <td><p class="wine">Tea</p></td>
+                                    <td><p class="wine_price">3.50</p></td>
+                                </tr>  
+                            </table>
                         </div>
-                    </div>      
+                    </div>
+                </div>      
             </div>
 
             <!-- BOOK BUTTON -->
             <div class="w3-center">
-                <p><a class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
+                <p><a role="link" class="w3-button w3-hover-sand" id="reservation_button" href = "./reservation.html">MAKE A RESERVATION</a> </p>
             </div>
         </main>
-        <footer>
+        
+        <footer role="contentinfo">
             <div class="w3-container w3-center">
-
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
-              
+                <button role="button" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
                 <div id="id01" class="w3-modal">
-                  <div class="w3-modal-content w3-animate-opacity">
-
-
-                    <div class="w3-container w3-black">
-                        <span onclick="document.getElementById('id01').style.display='none'"
-                        class="w3-button w3-display-topright">&times;</span>
-                        <h2>Privacy Statement</h2>
-                    </div>
-                  
-                      <div class="w3-container">
-                        <p class="modal">
-                            <br> We collect personal information from you, including information about your:<br>
-                            <span class="emphasized">- name<br>
-                            - contact information<br>
-                            - location<br></span>
-                            We collect your personal information in order to to secure booking made via our web application and
-                            collect your location to make sure Google directions are correct. <br>
-                            Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
-                            If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
-                            <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                    <div class="w3-modal-content w3-animate-opacity">
+                        <div class="w3-container w3-black">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <h2 role="heading" aria-level="2" >Privacy Statement</h2>
+                        </div>
+                        <div class="w3-container">
+                            <p class="modal">
+                                <br> We collect personal information from you, including information about your:<br>
+                                <span class="emphasized">- name<br>
+                                        - contact information<br>
+                                        - location<br></span>
+                                        We collect your personal information in order to to secure booking made via our web application and
+                                        collect your location to make sure Google directions are correct. <br>
+                                        Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                                        If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                                        <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                                        <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                                        <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                                        <br>If you&prime;d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                            </p>
                             
-                            <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
-                            <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
-                            <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
-                        </p>
-                        <!-- Close button-->
-                        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
-                        <br><br>
+                            <!-- Close button-->
+                            <button role="button" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                            <br><br>
+                        </div>
                     </div>
-                  </div>
-                  <script>
-                    // Get the modal
-                    var modal = document.getElementById('id01');                        
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-                      }
-                    }
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
                     </script>
                 </div>
+            
                 <!-- Copuright-->
-                <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
-              </div>        
+                <div > <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+            </div>        
         </footer>
-
-</body>
+    </body>
 </html>

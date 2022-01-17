@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-     <head>
+<html lang="en"  role="document">
+    <head>
         <!-- Fixes 404error for favcon as I don't use any in the app-->
         <link rel="shortcut icon" href="#">
-
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <!-- Page title -->
 		<title>HAUKAI - MAKE A BOOKING </title>
-
         <!-- Web font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-   
         <!-- W3.CSS framework import-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">   
-   
     </head>
+    
     <body>
-    
-    
         <!-- NAVIGARION BAR (for desktop)-->
-    <nav >
-        <div class="w3-bar  ">
-            <a class=" w3-bar-item w3-button  w3-hover-sand w3-hide-small"  href = "./index.html" > HOME </a> 
-            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a> 				
-<a class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./hours.html">HOURS</a>
-            <a class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
-            
-            <div class="w3-sand  w3-bar-item w3-button  "  > RESERVATION </div>   <!-- selection for the active page -->	
-             
-            
-            <a href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
-        </div>
+        <nav role="navigation" >
+            <div class="w3-bar  ">
+                <a role="link" class=" w3-bar-item w3-button  w3-hover-sand w3-hide-small"  href = "./index.html" > HOME </a> 
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a> 				
+                <a role="link" class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./hours.html">HOURS</a>
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./menu.html" > FOOD </a>
+                <div class="w3-sand  w3-bar-item w3-button  "  > RESERVATION </div>   <!-- selection for the active page -->	
+                <a role="link" href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+            </div>
 
-        <!-- Collapsed menu on small screens-->            
-        <div id="nav_small" class=" w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACT </a>
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
-            <a class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
-        </div>    
+            <!-- Collapsed menu on small screens-->            
+            <div id="nav_small" class="w3-top w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACT </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 				
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./menu.html" > FOOD </a>
+            </div>    
             <!-- Function to collapse navbar on small screens-->
             <script>
                 function myFunction() {
@@ -57,8 +48,12 @@
             </script>
         </nav>
 
-            <main >
-                <h1 class="border_bottom" >HAUKAI | RESERVATION</h1>
+        <header role="banner">
+            <h1 role="heading"  aria-level="1" class="border_bottom" >HAUKAI | RESERVATION</h1>
+        </header>
+
+        <main role="main">
+                
                 <!-- I've decided to use Google Forms for collecting reservations at this stage
                 because using html form would imply creating a back end for processing queries,
                 which will increase cost and overall complexity of the project.
@@ -67,63 +62,57 @@
                 spreadsheet which will be easily acessible for the staff. 
                 Later when the restaurant reopens and will have a reasonable number of clients 
                 this form can be easily replaced with an html code and connected to the databse-->
-                <div style="height: 100vh;">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXNj74hGmX8W5wPvSCVjsvKybstcl6w1L2YgqWpjvOla-HsQ/viewform?embedded=true" 
-                        style = "height:100%; width:100%;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div style="height: 100vh;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXNj74hGmX8W5wPvSCVjsvKybstcl6w1L2YgqWpjvOla-HsQ/viewform?embedded=true" 
+                        title="Google booking form" style = "height:100%; width:100%;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                  </div>
             </main>
 
-            <footer>
+            <footer role="contentinfo">
                 <div class="w3-container w3-center">
-
-                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
-                
+                    <button role="button" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
                     <div id="id01" class="w3-modal">
-                    <div class="w3-modal-content w3-animate-opacity">
-
-
-                        <div class="w3-container w3-black">
-                            <span onclick="document.getElementById('id01').style.display='none'"
-                            class="w3-button w3-display-topright">&times;</span>
-                            <h2>Privacy Statement</h2>
-                        </div>
-                    
-                        <div class="w3-container">
-                            <p class="modal">
-                                <br> We collect personal information from you, including information about your:<br>
-                                <span class="emphasized">- name<br>
-                                - contact information<br>
-                                - location<br></span>
-                                We collect your personal information in order to to secure booking made via our web application and
-                                collect your location to make sure Google directions are correct. <br>
-                                Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
-                                If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
-                                <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                        <div class="w3-modal-content w3-animate-opacity">
+                            <div class="w3-container w3-black">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <h2 role="heading" aria-level="2" >Privacy Statement</h2>
+                            </div>
+                            <div class="w3-container">
+                                <p class="modal">
+                                    <br> We collect personal information from you, including information about your:<br>
+                                    <span class="emphasized">- name<br>
+                                            - contact information<br>
+                                            - location<br></span>
+                                            We collect your personal information in order to to secure booking made via our web application and
+                                            collect your location to make sure Google directions are correct. <br>
+                                            Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                                            If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                                            <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                                            <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                                            <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                                            <br>If you&prime;d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                                </p>
                                 
-                                <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
-                                <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
-                                <br>If you’d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
-                            </p>
-                            <!-- Close button-->
-                            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
-                            <br><br>
+                                <!-- Close button-->
+                                <button role="button" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                                <br><br>
+                            </div>
                         </div>
-                    </div>
-                    <script>
-                        // Get the modal
-                        var modal = document.getElementById('id01');                        
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                        }
+                        <script>
+                            // Get the modal
+                            var modal = document.getElementById('id01');                        
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
                         </script>
                     </div>
+                
                     <!-- Copuright-->
-                    <div id="copiright"> <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+                    <div > <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
                 </div>        
             </footer>
-
-    </body>
-</html>
+        </body>
+    </html>
