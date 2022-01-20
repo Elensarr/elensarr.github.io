@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"  role="document">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title -->
+		<title>HAUKAI - OUR MENU </title>
+        <!-- Web font import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR26KLW60Y"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LR26KLW60Y');
+        </script>
+        
+        <!-- W3.CSS framework import-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+       
+
+    </head>
+    <body>
+        <nav role="navigation">
+            <div class="w3-bar w3-top ">
+                <a role="link" class=" w3-bar-item w3-black w3-button  w3-hover-sand w3-hide-small "  href = "./index.html" > HOME </a> 
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./contact.html" > CONTACTS </a>
+                <a role="link" class="w3-bar-item w3-black w3-button w3-hover-sand w3-hide-small" href = "./hours.html" > HOURS </a> 				
+                <div class="w3-sand  w3-bar-item w3-button  "  > FOOD </div>   <!-- selection for the active page -->	
+                <a role="link" class="w3-bar-item w3-black  w3-button w3-hover-sand w3-hide-small" href = "./reservation.html">RESERVATION</a>
+                <a role="link" href="javascript:void(0)" class="w3-bar-item w3-black w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">MENU &#9776;</a>
+            </div>
+            <!-- Collapsed menu on small screens-->            
+            <div id="nav_small" class=" w3-top w3-bar-block w3-black w3-balck w3-hide w3-hide-large w3-hide-medium">
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./index.html" > HOME </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./contact.html" > CONTACTS </a>
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./hours.html" > HOURS </a> 	
+                <a role="link" class="w3-bar-item w3-button w3-hover-sand" href = "./reservation.html">RESERVATION</a>
+            </div>    
+            <!-- Function to collapse navbar on small screens-->
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("nav_small");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else { 
+                        x.className = x.className.replace(" w3-show", "fccc");
+                    }
+                    }
+            </script>
+        </nav>
+
+        <header role="banner">
+            <h1 role="heading"  aria-level="1" class="border_bottom" >HAUKAI | STAFF ROSTER </h1>
+        </header>
+
+        <main role="main">
+            <div class="w3-container w3-center">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQdwgDBFNrY3iUFrDbk5w78gbCk34qF54tTIeE12GDPMWSdSm0DxjxHRZL_BI3PeeTSnVygX5_SYjBT/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false" 
+                title="Embed Google sheet with Staff Roster"
+                style="border:none; width: 100%; height:300px"></iframe>
+            </div>
+            
+
+        </main>
+
+        <footer role="contentinfo">
+            <div class="w3-container w3-center">
+                <button role="button" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-black w3-hover-sand">Privacy Statement</button>
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-opacity">
+                        <div class="w3-container w3-black">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <h2 role="heading" aria-level="2" >Privacy Statement</h2>
+                        </div>
+                        <div class="w3-container">
+                            <p class="modal">
+                                <br> We collect personal information from you, including information about your:<br>
+                                <span class="emphasized">- name<br>
+                                        - contact information<br>
+                                        - location<br></span>
+                                        We collect your personal information in order to to secure booking made via our web application and
+                                        collect your location to make sure Google directions are correct. <br>
+                                        Providing some information is optional. If you choose not to enter personal informaition, we'll not be able to make a reservation in the Haukai restaurant.<br>
+                                        If you choose not to enter location information we'll be unable to provide accurate direction to the restaurant.
+                                        <br> We keep your information safe by storing it in encrypting files and only allowing our administration staff to access it .
+                                        <br>We keep your information for 1 day after the reservation has taken place at which point we securely destroy it by erasing digits.
+                                        <br>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong.
+                                        <br>If you&prime;d like to ask for a copy of your information, or to have it corrected, please contact us at <span class="bolded"> info@haukai.co.nz, or (09) 401-4019, or 1 Island Street Kerikeri, Bay of Islands.</span> <br><br>
+                            </p>
+                            
+                            <!-- Close button-->
+                            <button role="button" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-black ">Close</button>
+                            <br><br>
+                        </div>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            
+                <!-- Copuright-->
+                <div > <p class="w3-text-white"> @Elensarr for HAUKAI, 2022 <br> </p></div>
+            </div>        
+        </footer>
+    </body>
+</html>
